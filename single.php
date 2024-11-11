@@ -3,10 +3,9 @@ get_header();
 ?>
 
 <body>
-
     <div class="container-fluid">
-        <div class=" container">
-            <div class="row pt-5 ">
+        <div class="container">
+            <div class="row pt-5">
                 <div class="section-title col-lg-12 col-md-12 align-middle">
                     <?php
                     if (function_exists('yoast_breadcrumb')) {
@@ -26,13 +25,44 @@ get_header();
                             </div>
                             <h1 class="mb-3 text-secondary text-uppercase font-weight-bold"><?php echo get_the_title() ?></h1>
 
+
+                            <div class="excerpt">
+                                <?php
+                                /**
+                                 * Filter the except length to 20 words.
+                                 *
+                                 * @param int $length Excerpt length.
+                                 * @return int (Maybe) modified excerpt length.
+                                 */
+                                // function wpdocs_custom_excerpt_length($length)
+                                // {
+                                //     return -1;
+                                // }
+                                // add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
+
+                                    if(has_excerpt()){
+                                        echo the_excerpt();
+                                    }else{
+                                        echo '';
+                                    }
+
+                                ?>
+                            </div>
+                            <!-- Table of Contents -->
+                            <div id="table-of-contents" class="mb-4 p-3 bg-light border">
+                                <h2>فهرست مطالب</h2>
+                                <ul id="toc-list"></ul>
+                            </div>
+                            <!-- Table of Contents -->
                             <!-- Post Content -->
-                            <?php if (have_posts()) {
-                                while (have_posts()) {
-                                    the_post();
-                                    the_content();
-                                }
-                            } ?>
+                            <div class="post-content">
+                                <?php if (have_posts()) {
+                                    while (have_posts()) {
+                                        the_post();
+                                        the_content();
+                                    }
+                                } ?>
+                            </div>
                             <!-- Post Content -->
                         </div>
                         <div class="d-flex justify-content-between bg-white border border-top-0 p-4 flex-wrap">
@@ -52,10 +82,9 @@ get_header();
                 <!-- Sidebar -->
                 <?php get_template_part('/template-parts/sidbar', 'main') ?>
                 <!-- Sidebar -->
-
             </div>
         </div>
-        <div class=" container">
+        <div class="container">
             <div class="row pt-5">
                 <div class="col-12">
                     <!-- Comments -->
@@ -63,10 +92,35 @@ get_header();
                     <!-- Comments -->
                 </div>
             </div>
-
         </div>
     </div>
 
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const postContent = document.querySelector('.post-content');
+            const tocList = document.getElementById('toc-list');
+            const headings = postContent.querySelectorAll('h2, h3');
+
+            if (headings.length > 0) {
+                headings.forEach((heading, index) => {
+                    const id = `heading-${index}`;
+                    heading.id = id;
+
+                    const li = document.createElement('li');
+                    li.style.marginLeft = heading.tagName === 'H3' ? '20px' : '0';
+
+                    const link = document.createElement('a');
+                    link.href = `#${id}`;
+                    link.textContent = heading.textContent;
+
+                    li.appendChild(link);
+                    tocList.appendChild(li);
+                });
+            } else {
+                document.getElementById('table-of-contents').style.display = 'none';
+            }
+        });
+    </script> -->
 </body>
 
 <?php
