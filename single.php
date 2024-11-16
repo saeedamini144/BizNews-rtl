@@ -24,8 +24,6 @@ get_header();
                                 <span class="text-body"><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></span>
                             </div>
                             <h1 class="mb-3 text-secondary text-uppercase font-weight-bold"><?php echo get_the_title() ?></h1>
-
-
                             <div class="excerpt">
                                 <?php
                                 /**
@@ -94,33 +92,6 @@ get_header();
             </div>
         </div>
     </div>
-
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const postContent = document.querySelector('.post-content');
-            const tocList = document.getElementById('toc-list');
-            const headings = postContent.querySelectorAll('h2, h3');
-
-            if (headings.length > 0) {
-                headings.forEach((heading, index) => {
-                    const id = `heading-${index}`;
-                    heading.id = id;
-
-                    const li = document.createElement('li');
-                    li.style.marginLeft = heading.tagName === 'H3' ? '20px' : '0';
-
-                    const link = document.createElement('a');
-                    link.href = `#${id}`;
-                    link.textContent = heading.textContent;
-
-                    li.appendChild(link);
-                    tocList.appendChild(li);
-                });
-            } else {
-                document.getElementById('table-of-contents').style.display = 'none';
-            }
-        });
-    </script> -->
 </body>
 
 <?php
