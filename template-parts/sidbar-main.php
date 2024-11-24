@@ -75,7 +75,7 @@ $show_category = fw_get_db_customizer_option('show_category');
         <!-- Ads Start -->
         <div class="mb-3">
             <div class="section-title mb-0">
-                <h4 class="m-0  font-weight-bold"><?php echo $add_title ?></h4>
+                <span class="m-0 "><?php echo $add_title ?></span>
             </div>
             <div class="bg-white text-center border border-top-0 p-3">
                 <a href=""><img
@@ -89,7 +89,7 @@ $show_category = fw_get_db_customizer_option('show_category');
         <!-- Popular News Start -->
         <div class="mb-3">
             <div class="section-title mb-0">
-                <h4 class="m-0  font-weight-bold"><?php echo $trending_sidbar ?></h4>
+                <span class="m-0 "><?php echo $trending_sidbar ?></span>
             </div>
             <div class="bg-white border border-top-0 p-3">
 
@@ -127,7 +127,7 @@ $show_category = fw_get_db_customizer_option('show_category');
         <!-- category Start -->
         <div class="mb-3">
             <div class="section-title mb-0">
-                <h4 class="m-0  font-weight-bold"><?php echo $show_category ?></h4>
+                <span class="m-0"><?php echo $show_category ?></span>
             </div>
             <div class="bg-white border border-top-0 p-3">
                 <div class="d-flex flex-wrap m-n1">

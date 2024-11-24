@@ -9621,6 +9621,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     border: 1px solid #dee2e6;
     border-right: 5px solid #FFCC00;
   }
+  .section-title span{
+    font-size: 20px;
+    color: var(--dark);
+  }
   .section-title-archive {
     margin-bottom: 15px;
     padding: 15px;

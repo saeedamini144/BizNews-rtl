@@ -16,7 +16,7 @@
  <footer class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
      <div class="row py-4">
          <div class="col-lg-3 col-md-6 mb-5">
-             <h5 class="mb-4 text-white text-uppercase font-weight-bold"><?php echo $column_one_title ?></h5>
+             <div class="mb-4 text-white"><?php echo $column_one_title ?></div>
 
              <?php
                 if (!empty($contact_list)) {
@@ -40,7 +40,7 @@
                 }
                 ?>
 
-             <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold"><?php echo $Social_title ?></h6>
+             <span class="mt-4 mb-3 text-white"><?php echo $Social_title ?></span>
              <div class="d-flex justify-content-start">
                  <?php
 
@@ -67,7 +67,7 @@
              </div>
          </div>
          <div class="col-lg-3 col-md-6 mb-5">
-             <h5 class="mb-4 text-white text-uppercase font-weight-bold"><?php echo $Footer_column_two_title ?></h5>
+             <div class="mb-4 text-white "><?php echo $Footer_column_two_title ?></div>
 
              <!-- show the main slider -->
              <?php get_template_part('/template-parts/postWithoutImage', 'card') ?>
@@ -75,7 +75,7 @@
 
          </div>
          <div class="col-lg-3 col-md-6 mb-5">
-             <h5 class="mb-4 text-white text-uppercase font-weight-bold"><?php echo $Footer_column_three_title ?></h5>
+             <div class="mb-4 text-white "><?php echo $Footer_column_three_title ?></div>
              <div class="m-n1">
 
                  <!-- show all post category -->
@@ -99,7 +99,7 @@
              </div>
          </div>
          <div class="col-lg-3 col-md-6 mb-5">
-             <h5 class="mb-4 text-white text-uppercase font-weight-bold"><?php echo $Footer_column_four_title ?></h5>
+             <div class="mb-4 text-white "><?php echo $Footer_column_four_title ?></div>
              <div class="row">
 
                  <!-- show gallery -->

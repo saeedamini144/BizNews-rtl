@@ -43,12 +43,13 @@ get_header();
                                     }else{
                                         echo '';
                                     }
-
+                                    
+                                    // (has_excerpt() )? the_excerpt() : ''
                                 ?>
                             </div>
                             <!-- Table of Contents -->
                             <div id="table-of-contents" class="mb-4 p-3 bg-light border">
-                                <h2>فهرست مطالب</h2>
+                                <span>فهرست مطالب</span>
                                 <ul id="toc-list"></ul>
                             </div>
                             <!-- Table of Contents -->
