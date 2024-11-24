@@ -209,3 +209,16 @@ function g2p($g_y, $g_m, $g_d)
 
     return array($jy, $jm, $jd, $j_all_days);
 }
+
+
+///change replay title comments
+add_filter('comment_form_defaults', 'custom_comment_form_defaults');
+
+function custom_comment_form_defaults($defaults) {
+    // تغییر تگ comment-reply-title به h4
+    if (isset($defaults['title_reply_before']) && isset($defaults['title_reply_after'])) {
+        $defaults['title_reply_before'] = '<p id="reply-title" class="comment-reply-title">';
+        $defaults['title_reply_after'] = '</p>';
+    }
+    return $defaults;
+}

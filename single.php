@@ -49,7 +49,7 @@ get_header();
                             </div>
                             <!-- Table of Contents -->
                             <div id="table-of-contents" class="mb-4 p-3 bg-light border">
-                                <span>فهرست مطالب</span>
+                                <p>فهرست مطالب</p>
                                 <ul id="toc-list"></ul>
                             </div>
                             <!-- Table of Contents -->
@@ -71,7 +71,7 @@ get_header();
                                     src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>"
                                     width="25"
                                     height="25"
-                                    alt=" " />
+                                    alt="Author-image " />
                                 <small><?php the_author() ?></small>
                             </div>
                         </div>

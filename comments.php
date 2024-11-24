@@ -26,7 +26,7 @@ if (post_password_required()) {
 <!-- Comment Form Start -->
 <div class="mb-3">
     <div class="section-title mb-0">
-        <span class="m-0 text-uppercase font-weight-bold">دیدگاه شما برای ما ارزشمند است</span>
+        <div class="m-0 text-uppercase font-weight-bold">دیدگاه شما برای ما ارزشمند است</div>
     </div>
     <div class="bg-white border border-top-0 p-4">
         <?php
@@ -62,12 +62,12 @@ if (post_password_required()) {
 function custom_comment_list($comment, $args, $depth) {
     ?>
     <div class="media mb-4">
-        <img src="<?php echo get_avatar_url($comment, array('size' => 45)); ?>" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+        <img src="<?php echo get_avatar_url($comment, array('size' => 45)); ?>" alt="Author-Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
         <div class="media-body">
-            <h6>
+            <div>
                 <a class="text-secondary font-weight-bold" href=""><?php comment_author(); ?></a>
                 <small><i><?php comment_date(); ?></i></small>
-            </h6>
+            </div>
             <p><?php comment_text(); ?></p>
             <?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth'], 'reply_text' => 'Reply', 'class' => 'btn btn-sm btn-outline-secondary'))); ?>
         </div>
