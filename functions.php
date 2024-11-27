@@ -210,15 +210,34 @@ function g2p($g_y, $g_m, $g_d)
     return array($jy, $jm, $jd, $j_all_days);
 }
 
+//show average comments ratings
 
-///change replay title comments
-add_filter('comment_form_defaults', 'custom_comment_form_defaults');
+function display_average_rating($post_id) {
+    // گرفتن تمام امتیازهای این پست
+    $comments = get_comments(array('post_id' => $post_id, 'status' => 'approve'));
+    $total_rating = 0;
+    $total_comments = 0;
 
-function custom_comment_form_defaults($defaults) {
-    // تغییر تگ comment-reply-title به h4
-    if (isset($defaults['title_reply_before']) && isset($defaults['title_reply_after'])) {
-        $defaults['title_reply_before'] = '<p id="reply-title" class="comment-reply-title">';
-        $defaults['title_reply_after'] = '</p>';
+    foreach ($comments as $comment) {
+        $rating = get_comment_meta($comment->comment_ID, 'rating', true);
+        if ($rating) {
+            $total_rating += $rating;
+            $total_comments++;
+        }
     }
-    return $defaults;
+
+    // محاسبه میانگین
+    $average_rating = $total_comments > 0 ? round($total_rating / $total_comments) : 0;
+
+    // تولید HTML برای نمایش ستاره‌ها
+    echo '<div class="average-rating">';
+    for ($i = 1; $i <= 5; $i++) {
+        if ($i <= $average_rating) {
+            echo '<span class="star text-warning">★</span>';
+        } else {
+            echo '<span class="star">★</span>';
+        }
+    }
+    echo '</div>';
 }
+

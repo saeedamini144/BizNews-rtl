@@ -19,9 +19,21 @@ get_header();
                         <img class="img-fluid w-100" src="<?php echo get_the_post_thumbnail_url(); ?>" style="object-fit: cover;">
                         <div class="bg-white border border-top-0 p-4">
                             <div class="mb-3">
+
+                                <!-- POst category -->
                                 <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                    href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name; ?></a>
+                                    href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name; ?>
+                                </a>
+                                <!-- POst category -->
+
+                                <!-- Post date Publish -->
                                 <span class="text-body"><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></span>
+                                <!-- Post date Publish -->
+
+                                <!-- average star ratings -->
+                                <span><?php display_average_rating(get_the_ID()); ?></span>
+                                <!--average star ratings -->
+
                             </div>
                             <h1 class="mb-3 text-secondary text-uppercase font-weight-bold"><?php echo get_the_title() ?></h1>
                             <div class="excerpt">
@@ -38,13 +50,13 @@ get_header();
                                 // }
                                 // add_filter('excerpt_length', 'wpdocs_custom_excerpt_length', 999);
 
-                                    if(has_excerpt()){
-                                        echo the_excerpt();
-                                    }else{
-                                        echo '';
-                                    }
-                                    
-                                    // (has_excerpt() )? the_excerpt() : ''
+                                if (has_excerpt()) {
+                                    echo the_excerpt();
+                                } else {
+                                    echo '';
+                                }
+
+                                // (has_excerpt() )? the_excerpt() : ''
                                 ?>
                             </div>
                             <!-- Table of Contents -->
@@ -84,7 +96,7 @@ get_header();
             </div>
         </div>
         <div class="container">
-            <div class="row pt-5">
+            <div class=" pt-5">
                 <div class="col-12">
                     <!-- Comments -->
                     <?php comments_template('/comments.php'); ?>

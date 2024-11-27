@@ -639,7 +639,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   @media (min-width: 1200px) {
     .container, .container-sm, .container-md, .container-lg, .container-xl {
       /* max-width: 1140px; */
-      max-width: 90%;
+      max-width: 100%;
     }
   }
   
@@ -9958,4 +9958,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
   100% {
       transform: translateX(0);
   }
+}
+
+.average-rating {
+  display: flex; /* برای چیدمان افقی ستاره‌ها */
+  align-items: center;
+  gap: 4px; /* فاصله بین ستاره‌ها */
+}
+
+.average-rating .star {
+  font-size: 1.5rem; /* اندازه ستاره‌ها */
+  color: #ddd; /* رنگ پیش‌فرض ستاره‌ها (خاموش) */
+  transition: color 0.3s ease; /* برای انیمیشن رنگ */
+}
+
+.average-rating .star.text-warning {
+  color: #ffc107; /* رنگ ستاره‌های روشن */
 }
