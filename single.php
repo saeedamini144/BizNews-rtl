@@ -77,15 +77,16 @@ get_header();
                             <!-- Post Content -->
                         </div>
                         <div class="d-flex justify-content-between bg-white border border-top-0 p-4 flex-wrap">
-                            <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center pb-3">
                                 <img
                                     class="rounded-circle ml-2"
                                     src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>"
-                                    width="25"
-                                    height="25"
+                                    width="50"
+                                    height="50"
                                     alt="Author-image " />
-                                <small><?php the_author() ?></small>
+                                <p class="pt-4"><?php the_author() ?></p>
                             </div>
+                            <p><?php the_author_meta('description')?></p>
                         </div>
                     </div>
                 </div>
