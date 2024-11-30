@@ -241,3 +241,15 @@ function display_average_rating($post_id) {
     echo '</div>';
 }
 
+///change replay title comments
+
+function custom_comment_form_defaults($defaults) {
+    // تغییر تگ comment-reply-title به h4
+    if (isset($defaults['title_reply_before']) && isset($defaults['title_reply_after'])) {
+        $defaults['title_reply_before'] = '<p id="reply-title" class="comment-reply-title">';
+        $defaults['title_reply_after'] = '</p>';
+    }
+    return $defaults;
+}
+
+add_filter('comment_form_defaults', 'custom_comment_form_defaults');
