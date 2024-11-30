@@ -15,13 +15,22 @@ get_header();
                 </div>
                 <div class="col-lg-8 col-md-12">
                     <!-- News Detail Start -->
-                    <div class="position-relative mb-3">
-                        <img class="img-fluid w-100" src="<?php echo get_the_post_thumbnail_url(); ?>" style="object-fit: cover;">
+                    <div class="position-relative mb-3 ">
+
                         <div class="bg-white border border-top-0 p-4">
                             <div class="mb-3">
+                                <!-- Post title -->
+                                <h1 class="mb-3 text-secondary text-uppercase font-weight-bold"><?php echo get_the_title() ?></h1>
+                                <!-- Post title -->
 
-                                <!-- POst category -->
-                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                <!-- Post feature image -->
+                                <img class="img-fluid w-100 mb-3" src="<?php echo get_the_post_thumbnail_url(); ?>" style="object-fit: cover;">
+                                <!-- Post feature image -->
+
+                            </div>
+                            <div class="d-flex mb-3 align-content-center">
+                                 <!-- POst category -->
+                                 <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                     href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name; ?>
                                 </a>
                                 <!-- POst category -->
@@ -33,9 +42,7 @@ get_header();
                                 <!-- average star ratings -->
                                 <span><?php display_average_rating(get_the_ID()); ?></span>
                                 <!--average star ratings -->
-
                             </div>
-                            <h1 class="mb-3 text-secondary text-uppercase font-weight-bold"><?php echo get_the_title() ?></h1>
                             <div class="excerpt">
                                 <?php
                                 /**
@@ -86,7 +93,7 @@ get_header();
                                     alt="Author-image " />
                                 <p class="pt-4"><?php the_author() ?></p>
                             </div>
-                            <p><?php the_author_meta('description')?></p>
+                            <p><?php the_author_meta('description') ?></p>
                         </div>
                     </div>
                 </div>

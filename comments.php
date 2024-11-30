@@ -5,7 +5,7 @@ if (post_password_required()) {
 ?>
 
 <!-- Comment List Start -->
-<div class="container mb-3">
+<div class=" mb-3">
     <div class="section-title mb-0">
         <span class="m-0 text-uppercase font-weight-bold">
             <?php echo get_comments_number(); ?> نظرات
@@ -46,19 +46,19 @@ if (post_password_required()) {
                             </div>',
             ),
             'comment_field' => '<div class="form-group">
-                                    <label for="message">پیغام *</label>
-                                    <textarea id="message" name="comment" cols="30" rows="5" class="form-control" required></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="rating">امتیاز شما *</label>
-                                    <select id="rating" name="rating" class="form-control" required>
-                                        <option value="5">⭐⭐⭐⭐⭐ - عالی</option>
-                                        <option value="4">⭐⭐⭐⭐ - خوب</option>
-                                        <option value="3">⭐⭐⭐ - متوسط</option>
-                                        <option value="2">⭐⭐ - ضعیف</option>
-                                        <option value="1">⭐ - بسیار ضعیف</option>
-                                    </select>
-                                </div>',
+                        <label for="message">پیغام *</label>
+                        <textarea id="message" name="comment" cols="30" rows="5" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                         <label for="rating">امتیاز شما *</label>
+                            <select id="rating" name="rating" class="form-control" required>
+                                <option value="5">⭐⭐⭐⭐⭐ - عالی</option>
+                                <option value="4">⭐⭐⭐⭐ - خوب</option>
+                                <option value="3">⭐⭐⭐ - متوسط</option>
+                                <option value="2">⭐⭐ - ضعیف</option>
+                                <option value="1">⭐ - بسیار ضعیف</option>
+                            </select>
+                    </div>',
             'submit_button' => '<div class="form-group mb-0">
                                     <input type="submit" value="ارسال دیدگاه" class="btn btn-primary font-weight-semi-bold py-2 px-3">
                                 </div>',
@@ -72,9 +72,11 @@ if (post_password_required()) {
 // ذخیره متادیتای امتیاز
 add_action('comment_post', function ($comment_id) {
     if (isset($_POST['rating']) && is_numeric($_POST['rating'])) {
-        add_comment_meta($comment_id, 'rating', intval($_POST['rating']), true);
+        $rating = intval($_POST['rating']);
+        add_comment_meta($comment_id, 'rating', $rating, true);
     }
 });
+
 
 
 function custom_comment_list($comment, $args, $depth)
@@ -89,12 +91,19 @@ function custom_comment_list($comment, $args, $depth)
             <div>
                 <!-- نام نویسنده -->
                 <a class="text-secondary font-weight-bold pr-4" href=""><?php comment_author(); ?></a>
+
                 <!-- نمایش امتیاز (ستاره‌ها) -->
-                <?php if ($rating) : ?>
-                    <span class="text-warning">
-                        <?php echo str_repeat('⭐', intval($rating)); ?>
-                    </span>
-                <?php endif; ?>
+                <span class="text-warning">
+                    <?php
+                    for ($i = 1; $i <= 5; $i++) {
+                        if ($rating && $i <= intval($rating)) {
+                            echo '<span class="star text-warning">★</span>'; // ستاره طلایی
+                        } else {
+                            echo '<span class="star text-muted">★</span>'; // ستاره توسی
+                        }
+                    }
+                    ?>
+                </span>
             </div>
 
             <!-- متن نظر -->
@@ -108,30 +117,13 @@ function custom_comment_list($comment, $args, $depth)
                 'class' => 'btn btn-sm btn-outline-secondary'
             ))); ?>
         </div>
+
+        <!-- تاریخ ارسال نظر -->
         <div>
-             <!-- تاریخ ارسال نظر -->
-             <small class="pr-4"><?php echo display_jalali_date('Y/m/d'); ?></small>
+            <small class="pr-4"><?php echo display_jalali_date('Y/m/d'); ?></small>
         </div>
     </div>
 <?php
 }
 
-
-///change replay title comments
-add_filter('comment_form_defaults', 'custom_comment_form_defaults');
-
-function custom_comment_form_defaults($defaults) {
-    // تغییر تگ comment-reply-title به h4
-    if (isset($defaults['title_reply_before']) && isset($defaults['title_reply_after'])) {
-        $defaults['title_reply_before'] = '<p id="reply-title" class="comment-reply-title">';
-        $defaults['title_reply_after'] = '</p>';
-    }
-    return $defaults;
-}
-//show the comment star rating
-add_action('comment_post', function ($comment_id) {
-    if (isset($_POST['rating']) && is_numeric($_POST['rating'])) {
-        update_comment_meta($comment_id, 'rating', intval($_POST['rating']));
-    }
-});
 ?>

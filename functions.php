@@ -213,7 +213,6 @@ function g2p($g_y, $g_m, $g_d)
 //show average comments ratings
 
 function display_average_rating($post_id) {
-    // گرفتن تمام امتیازهای این پست
     $comments = get_comments(array('post_id' => $post_id, 'status' => 'approve'));
     $total_rating = 0;
     $total_comments = 0;
@@ -226,16 +225,15 @@ function display_average_rating($post_id) {
         }
     }
 
-    // محاسبه میانگین
     $average_rating = $total_comments > 0 ? round($total_rating / $total_comments) : 0;
 
     // تولید HTML برای نمایش ستاره‌ها
     echo '<div class="average-rating">';
     for ($i = 1; $i <= 5; $i++) {
         if ($i <= $average_rating) {
-            echo '<span class="star text-warning">★</span>';
+            echo '<span class="star text-warning">★</span>'; // ستاره طلایی
         } else {
-            echo '<span class="star">★</span>';
+            echo '<span class="star text-muted">★</span>'; // ستاره توسی
         }
     }
     echo '</div>';
@@ -253,3 +251,16 @@ function custom_comment_form_defaults($defaults) {
 }
 
 add_filter('comment_form_defaults', 'custom_comment_form_defaults');
+
+//show the comment star rating
+add_action('comment_post', function ($comment_id) {
+    if (isset($_POST['rating']) && is_numeric($_POST['rating'])) {
+        $rating = intval($_POST['rating']);
+        if (!add_comment_meta($comment_id, 'rating', $rating, true)) {
+            update_comment_meta($comment_id, 'rating', $rating);
+        }
+        error_log("Rating saved for comment ID $comment_id: $rating");
+    } else {
+        error_log("Rating not saved for comment ID $comment_id. POST data: " . print_r($_POST, true));
+    }
+});
