@@ -28,20 +28,26 @@ get_header();
                                 <!-- Post feature image -->
 
                             </div>
-                            <div class="d-flex mb-3 align-content-center">
-                                 <!-- POst category -->
-                                 <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
-                                    href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name; ?>
-                                </a>
-                                <!-- POst category -->
+                            <div class="d-flex mb-3 align-items-center justify-content-start">
+                                <div class="m-2">
+                                    <!-- POst category -->
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                        href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name; ?>
+                                    </a>
+                                    <!-- POst category -->
+                                </div>
 
-                                <!-- Post date Publish -->
-                                <span class="text-body"><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></span>
-                                <!-- Post date Publish -->
+                                <div class="m-2">
+                                    <!-- Post date Publish -->
+                                    <span class="text-body"><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></span>
+                                    <!-- Post date Publish -->
+                                </div>
 
-                                <!-- average star ratings -->
-                                <span><?php display_average_rating(get_the_ID()); ?></span>
-                                <!--average star ratings -->
+                                <div class="m-2">
+                                    <!-- average star ratings -->
+                                    <span><?php display_average_rating(get_the_ID()); ?></span>
+                                    <!--average star ratings -->
+                                </div>
                             </div>
                             <div class="excerpt">
                                 <?php

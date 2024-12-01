@@ -5014,12 +5014,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
   
   .media {
-    display: flex;
-    align-items: flex-start;
+    /* display: flex;
+    align-items: flex-start; */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .media-body {
     flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .list-group {

@@ -84,31 +84,33 @@ function custom_comment_list($comment, $args, $depth)
     $rating = get_comment_meta($comment->comment_ID, 'rating', true); // گرفتن امتیاز کاربر
 ?>
     <div class="bg-white border-top p-4 media mb-2">
+
         <!-- تصویر نویسنده -->
         <img src="<?php echo get_avatar_url($comment, array('size' => 45)); ?>" alt="Author-Image" class="img-fluid mr-3 mt-1 rounded-circle" style="width: 45px;">
 
-        <div class="media-body">
-            <div>
-                <!-- نام نویسنده -->
-                <a class="text-secondary font-weight-bold pr-4" href=""><?php comment_author(); ?></a>
+        <!-- نام نویسنده -->
+        <span class="text-secondary font-weight-bold pr-4" href=""><?php comment_author(); ?></span>
 
-                <!-- نمایش امتیاز (ستاره‌ها) -->
-                <span class="text-warning">
-                    <?php
-                    for ($i = 1; $i <= 5; $i++) {
-                        if ($rating && $i <= intval($rating)) {
-                            echo '<span class="star text-warning">★</span>'; // ستاره طلایی
-                        } else {
-                            echo '<span class="star text-muted">★</span>'; // ستاره توسی
-                        }
-                    }
-                    ?>
-                </span>
-            </div>
+        <!-- نمایش امتیاز (ستاره‌ها) -->
+        <span class="text-warning">
+            <?php
+            for ($i = 1; $i <= 5; $i++) {
+                if ($rating && $i <= intval($rating)) {
+                    echo '<span class="star text-warning">★</span>'; // ستاره طلایی
+                } else {
+                    echo '<span class="star text-muted">★</span>'; // ستاره توسی
+                }
+            }
+            ?>
+        </span>
+
+        <div class="media-body flex-wrap">
 
             <!-- متن نظر -->
             <div class="pr-4"><?php comment_text(); ?></div>
+        </div>
 
+        <div class="d-flex justify-content-between">
             <!-- لینک پاسخ -->
             <?php comment_reply_link(array_merge($args, array(
                 'depth' => $depth,
@@ -116,11 +118,11 @@ function custom_comment_list($comment, $args, $depth)
                 'reply_text' => 'پاسخ',
                 'class' => 'btn btn-sm btn-outline-secondary'
             ))); ?>
-        </div>
+            <!-- تاریخ ارسال نظر -->
+            <div>
+                <small class="pr-4"><?php echo display_jalali_date('Y/m/d'); ?></small>
+            </div>
 
-        <!-- تاریخ ارسال نظر -->
-        <div>
-            <small class="pr-4"><?php echo display_jalali_date('Y/m/d'); ?></small>
         </div>
     </div>
 <?php
