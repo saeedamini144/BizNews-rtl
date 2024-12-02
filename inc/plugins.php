@@ -46,6 +46,11 @@ function BizNews_required_plugins()
             'slug'      => 'wordpress-seo',
             'required'  => true,
         ),
+		array(
+            'name'      => 'WP-PostViews',
+            'slug'      => 'wp-postviews',
+            'required'  => true,
+        ),
 
         // This is an example of the use of 'is_callable' functionality. A user could - for instance -
         // have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.

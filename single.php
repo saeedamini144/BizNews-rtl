@@ -20,7 +20,7 @@ get_header();
                         <div class="bg-white border border-top-0 p-4">
                             <div class="mb-3">
                                 <!-- Post title -->
-                                <h1 class="mb-3 text-secondary text-uppercase font-weight-bold"><?php echo get_the_title() ?></h1>
+                                <h1 class="mb-3 text-secondary font-weight-bold"><?php echo get_the_title() ?></h1>
                                 <!-- Post title -->
 
                                 <!-- Post feature image -->
@@ -30,6 +30,12 @@ get_header();
                             </div>
                             <div class="d-flex mb-3 align-items-center justify-content-start">
                                 <div class="m-2">
+                                    <!-- Post Views -->
+                                    <?php if (function_exists('the_views')) {
+                                        the_views();
+                                    } ?>
+                                    <!-- Post Views -->
+
                                     <!-- POst category -->
                                     <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
                                         href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name; ?>
@@ -48,6 +54,14 @@ get_header();
                                     <span><?php display_average_rating(get_the_ID()); ?></span>
                                     <!--average star ratings -->
                                 </div>
+
+                                <!-- Share Link -->
+
+                                <div class="share-post-content">
+
+                                </div>
+                                <!-- Share Link -->
+
                             </div>
                             <div class="excerpt">
                                 <?php
