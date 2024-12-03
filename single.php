@@ -146,9 +146,41 @@ get_header();
                                         ?>
                                     <?php endwhile; ?>
                                 <?php endif; ?>
+
+                                <!-- post change -->
+                                <div class="post-btn">
+                                    <!-- Previous Post -->
+                                    <div class="privious-post-btn">
+                                        <?php
+                                        $previous_post = get_previous_post();
+                                        if (!empty($previous_post)): ?>
+                                            <a href="<?php echo get_permalink($previous_post->ID); ?>">
+                                                <svg class="arrow" width="11" height="11" viewBox="0 0 11 11" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 10L1 1M1 1C3 1.375 7.375 2.125 10 1M1 1C1.375 2.875 2.125 7 1 10" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+                                                </svg>
+                                                PREVIOUS POST
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
+
+                                    <!-- Next Post -->
+                                    <div class="next-post-btn">
+                                        <?php
+                                        $next_post = get_next_post();
+                                        if (!empty($next_post)): ?>
+                                            <a href="<?php echo get_permalink($next_post->ID); ?>">
+                                                <svg class="arrow" width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" stroke="#191919" stroke-width="1.5" stroke-linecap="round"></path>
+                                                </svg>
+                                                NEXT POST
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <!-- post change -->
+
                             </div>
                             <!-- Post Content -->
-
 
                         </div>
                         <div class="d-flex justify-content-between bg-white border border-top-0 p-4 flex-wrap">

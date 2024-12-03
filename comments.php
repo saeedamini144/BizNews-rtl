@@ -50,7 +50,7 @@ if (post_password_required()) {
                         <textarea id="message" name="comment" cols="30" rows="5" class="form-control" required></textarea>
                     </div>
                     <div class="form-group">
-                         <label for="rating">امتیاز شما *</label>
+                         <label for="rating">امتیاز شما*</label>
                             <select id="rating" name="rating" class="form-control" required>
                                 <option value="5">⭐⭐⭐⭐⭐ - عالی</option>
                                 <option value="4">⭐⭐⭐⭐ - خوب</option>
