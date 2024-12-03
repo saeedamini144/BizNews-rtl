@@ -9980,3 +9980,64 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .average-rating .star.text-warning {
   color: #ffc107; /* رنگ ستاره‌های روشن */
 }
+
+
+ .post-btn {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  padding: 20px 0
+}
+
+ .post-btn .privious-post-btn a {
+  font-family: var(--font-red-rose);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18.74px;
+  text-align: left;
+  color: white;
+  background: var(--gray-dark);
+  padding: 11px 18px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  transition: .7s;
+  gap: 8px
+}
+
+ .post-btn .privious-post-btn a svg path {
+  stroke:white;
+ }  
+.post-btn .privious-post-btn a .arrow {
+  transform: rotate(90deg);
+  transition: .7s
+}
+
+ .post-btn .privious-post-btn a:hover {
+  color:var(--gray-dark);
+ background: #FFCC00;
+}
+
+ .post-btn .next-post-btn a {
+  font-family: var(--font-red-rose);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18.74px;
+  text-align: left;
+  color: white;
+  background: var(--gray-dark);
+  padding: 11px 18px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  transition: .7s;
+  gap: 8px
+}
+.post-btn .next-post-btn a svg path {
+  stroke: white;
+}
+
+ .post-btn .next-post-btn a:hover {
+  color: var(--gray-dark);
+  background: #FFCC00;
+}
