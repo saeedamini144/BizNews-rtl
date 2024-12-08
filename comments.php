@@ -7,7 +7,7 @@ if (post_password_required()) {
 <!-- Comment List Start -->
 <div class=" mb-3">
     <div class="section-title mb-0">
-        <span class="m-0 text-uppercase font-weight-bold">
+        <span class="m-0 font-weight-bold">
             <?php echo get_comments_number(); ?> نظرات
         </span>
     </div>

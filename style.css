@@ -17,6 +17,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @font-face {
   font-family: "iransans" ;
   src: url(fonts/IRANSansXFaNum-Regular.ttf);
+  font-display: swap;
 }
  :root {
     --blue: #007bff;

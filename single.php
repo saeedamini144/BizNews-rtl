@@ -6,6 +6,7 @@ get_header();
     <div class="container-fluid">
         <div class="container">
             <div class="row pt-5">
+                <!-- BreadCrumb -->
                 <div class="section-title col-lg-12 col-md-12 align-middle">
                     <?php
                     if (function_exists('yoast_breadcrumb')) {
@@ -13,6 +14,7 @@ get_header();
                     }
                     ?>
                 </div>
+                <!-- BreadCrumb -->
                 <div class="col-lg-8 col-md-12">
                     <!-- News Detail Start -->
                     <div class="position-relative mb-3 ">
@@ -191,14 +193,13 @@ get_header();
                         </div>
                     </div>
                 </div>
-
                 <!-- Sidebar -->
                 <?php get_template_part('/template-parts/sidbar', 'main') ?>
                 <!-- Sidebar -->
             </div>
         </div>
         <div class="container">
-            <div class=" pt-5">
+            <div class=" row pt-5">
                 <div class="col-12">
                     <!-- Comments -->
                     <?php comments_template('/comments.php'); ?>
