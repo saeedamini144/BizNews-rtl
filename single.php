@@ -7,7 +7,7 @@ get_header();
         <div class="container">
             <div class="row pt-5">
                 <!-- BreadCrumb -->
-                <div class="section-title col-lg-12 col-md-12 align-middle">
+                <div class="section-title section-title-breadcrumb col-lg-12 col-md-12 align-middle">
                     <?php
                     if (function_exists('yoast_breadcrumb')) {
                         yoast_breadcrumb('<p id="breadcrumbs" class="mt-2">', '</p>');
@@ -15,7 +15,7 @@ get_header();
                     ?>
                 </div>
                 <!-- BreadCrumb -->
-                <div class="col-lg-8 col-md-12">
+                <div class="col-lg-9 col-md-12">
                     <!-- News Detail Start -->
                     <div class="position-relative mb-3 ">
 
@@ -27,7 +27,7 @@ get_header();
                                 <!-- Post title -->
 
                                 <!-- Post feature image -->
-                                <img class="img-fluid w-100 mb-3" src="<?php echo get_the_post_thumbnail_url(); ?>" style="object-fit: cover;">
+                                <img class="feature-image w-100 mb-3" src="<?php echo get_the_post_thumbnail_url(); ?>" >
                                 <!-- Post feature image -->
 
                             </div>

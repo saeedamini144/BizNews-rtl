@@ -6,8 +6,8 @@ $args = new WP_Query(
     array(
         'post_type' => 'post',
         'posts_per_page' => 10,
-        'order' => 'date',
-        'orderby' => 'DESC',
+        'orderby' => 'date',    // اصلاح شد
+        'order' => 'DESC',
         'tax_query' => array(
             array(
                 'taxonomy' => 'category',
@@ -26,7 +26,7 @@ if (!empty($Breaking_news)) {
             <div class="text-truncate">
                 <a
                     class="text-white font-weight-semi-bold"
-                    href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 15); ?></a>
+                    href="<?php the_permalink(); ?>"><?php echo get_the_title() ?></a>
             </div>
 
 <?php

@@ -73,7 +73,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #9A9DA2;
+    color: var(--gray-dark);
     text-align: right;
     background-color: #EDEFF4;
   }
@@ -382,55 +382,65 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
   
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   
   @media (max-width: 1200px) {
     h1, .h1 {
-      font-size: calc(1.375rem + 1.5vw) ;
+      font-size: 1.2rem ;
+      line-height: 2rem;
     }
   }
   
   h2, .h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
   
   @media (max-width: 1200px) {
     h2, .h2 {
-      font-size: calc(1.325rem + 0.9vw) ;
+      font-size: 1.2rem ;
+      line-height: 2rem;
     }
   }
   
   h3, .h3 {
-    font-size: 1.75rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
   }
   
   @media (max-width: 1200px) {
     h3, .h3 {
-      font-size: calc(1.3rem + 0.6vw) ;
+      font-size: 1.1rem ;
+      line-height: 2rem;
     }
   }
   
   h4, .h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
   }
   
   @media (max-width: 1200px) {
     h4, .h4 {
-      font-size: calc(1.275rem + 0.3vw) ;
-    }
+      font-size: 1.1rem ;
+      line-height: 2rem;  
+      }
   }
   
   h5, .h5 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
   }
   
   h6, .h6 {
     font-size: 1rem;
+    line-height: 2rem;
   }
   
   .lead {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 300;
   }
   
@@ -442,7 +452,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   
   @media (max-width: 1200px) {
     .display-1 {
-      font-size: calc(1.725rem + 5.7vw) ;
+      font-size: 1.1rem ;
+      line-height: 2rem;
     }
   }
   
@@ -9630,6 +9641,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
     font-size: 20px;
     color: var(--dark);
   }
+  .section-title-breadcrumb span{
+    font-size: 16px;
+    color: var(--dark);
+  }
   .section-title-archive {
     margin-bottom: 15px;
     padding: 15px;
@@ -10041,4 +10056,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
  .post-btn .next-post-btn a:hover {
   color: var(--gray-dark);
   background: #FFCC00;
+}
+.feature-image{
+  object-fit: contain;
+   width: 1200px ;
+  height: 500px ;
+}
+@media (max-width: 425px) {
+  .feature-image{
+    object-fit: contain;
+     /* width: 1200px ; */
+    height: auto ;
+  }
+}
+#toc-list li a{
+  color: var(--gray-dark) !important;
+  font-size: 1rem !important;
+    line-height: 1.2rem;
 }

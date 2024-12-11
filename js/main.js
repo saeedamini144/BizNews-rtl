@@ -46,18 +46,32 @@
 
 
     // Tranding carousel
-    $(".tranding-carousel").owlCarousel({
+    $(".trending-carousel").owlCarousel({
         autoplay: true,
         rtl:true,
         smartSpeed: 2000,
-        items: 1,
+        items: 2,
         dots: false,
         loop: true,
         nav : false,
         navText : [
             '<i class="fa fa-angle-left"></i>',
             '<i class="fa fa-angle-right"></i>'
-        ]
+        ],
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:1
+            },
+            1024:{
+                items:2
+            }
+        }
     });
 
 
@@ -73,7 +87,18 @@
         navText : [
             '<i class="fa fa-angle-left" aria-hidden="true"></i>',
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-        ]
+        ],
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:1
+            }
+        }
     });
 
     // Carousel item 2

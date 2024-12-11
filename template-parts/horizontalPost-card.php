@@ -5,7 +5,7 @@ $middle_content = fw_get_db_customizer_option('middle_content');
 $args = new WP_Query(
     array(
         'post_type' => 'post',
-        'posts_per_page' => 8,
+        'posts_per_page' => 9,
         'orderby' => 'date',
         'order' => 'DESC',
         'tax_query' => array(
@@ -23,7 +23,7 @@ if (!empty($middle_content)) {
         while ($args->have_posts()) {
             $args->the_post();
 ?>
-            <div class="col-lg-6">
+            <div class="col-lg-4">
                 <div class="d-flex align-items-center bg-white mb-3" style="height: 110px; ">
                     <img class="img-fluid" style="width: 110px; height: 100%;" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                     <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-right-0">

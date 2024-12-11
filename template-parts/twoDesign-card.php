@@ -6,7 +6,7 @@
         array(
             'post_type' => 'post',
             'posts_per_page' => 8,
-            'orderby' => 'date',
+            'orderby' => 'date',    // اصلاح شد
             'order' => 'DESC',
             'tax_query' => array(
                 array(
@@ -24,9 +24,9 @@
             while ($args->have_posts()) {
                 $args->the_post();
                 $post_counter++; // شمارنده را اینجا افزایش می‌دهیم
-                if ($post_counter <= 4) {
+                if ($post_counter <= 3) {
     ?>
-                 <div class="col-lg-6">
+                 <div class="col-lg-4">
                      <div class="position-relative mb-3">
                          <img
                              class="img-fluid w-100"
@@ -66,10 +66,10 @@
                      </div>
                  </div>
              <?php
-                } elseif ($post_counter > 4 && $post_counter <= 8) {
+                } elseif ($post_counter > 3 && $post_counter <= 6) {
                     // echo "Displaying post number " . $post_counter . "<br>"; // بررسی شمارش پست‌ها
                 ?>
-                 <div class="col-lg-6">
+                 <div class="col-lg-4">
                      <div class="d-flex align-items-center bg-white mb-3" style="height: 110px; ">
                          <img class="img-fluid" style="width: 110px; height: 100%;" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                          <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-right-0">

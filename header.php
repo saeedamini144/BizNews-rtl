@@ -19,7 +19,7 @@
     <header>
         <!-- Topbar Start -->
         <div class="container-fluid d-none d-lg-block">
-            <div class="row align-items-center bg-dark px-lg-5">
+            <div class="row align-items-center bg-dark">
                 <div class="col-lg-9">
                     <nav class="navbar navbar-expand-sm bg-dark p-0">
                         <ul class="navbar-nav ml-n2">
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="row align-items-center bg-white py-3 px-lg-5">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <figure>
                         <?php
                         $custom_logo_id = get_theme_mod('custom_logo');
@@ -96,7 +96,7 @@
                         ?>
                     </figure>
                 </div>
-                <div class="col-lg-8 text-center text-lg-right">
+                <div class="col-lg-6 text-center text-lg-right">
                     <a href="#">
                         <img class="img-fluid" src="<?php
                                                     if (!empty($Banner_header)) {
@@ -115,7 +115,7 @@
 
         <!-- Navbar Start -->
 
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 ">
 
             <figure class="d-lg-none">
                 <?php
@@ -137,7 +137,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+            <div class="collapse navbar-collapse justify-content-between px-0 " id="navbarCollapse">
                 <?php
                 wp_nav_menu(array(
                     'theme_location' => 'header-menu',

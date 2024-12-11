@@ -37,7 +37,7 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
     <!-- Main News Slider End -->
 
     <!-- Breaking News Start -->
-    <div class="container-fluid bg-dark py-3 mb-3 overflow-hidden">
+    <div class="container bg-dark py-3 mb-3 overflow-hidden">
         <div class="container">
             <div class="row align-items-center bg-dark">
                 <div class="col-12">
@@ -47,7 +47,7 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
                             style="width: 170px">
                             <?php echo $Breaking_news_title ?>
                         </div>
-                        <div class="owl-carousel tranding-carousel position-relative d-inline-flex align-items-center ml-3"
+                        <div class="owl-carousel trending-carousel position-relative d-inline-flex align-items-center ml-3"
                             style="width: calc(100% - 170px); padding-right: 90px;">
 
                             <!-- Breaking News Content -->
@@ -83,7 +83,7 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
     <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                     <div class="row">
                         <div class="col-12">
                             <div class="section-title">
@@ -111,7 +111,7 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
                         <!-- Middle section content -->
                         <div class="container-fluid">
                             <div class="section-title">
-                                <h4 class="m-0 text-uppercase font-weight-bold"><?php echo$middle_content_title ?></h4>
+                                <h4 class="m-0 text-uppercase font-weight-bold"><?php echo $middle_content_title ?></h4>
                             </div>
                         </div>
                         <?php get_template_part('/template-parts/horizontalPost', 'card') ?>

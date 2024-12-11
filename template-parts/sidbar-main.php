@@ -6,7 +6,7 @@ $trending_sidbar = fw_get_db_customizer_option('trending_sidbar');
 $show_category = fw_get_db_customizer_option('show_category');
 ?>
 
-<aside class="col-lg-4">
+<aside class="col-lg-3">
     <div class="inner-sidbar">
         <!-- Social Follow Start -->
         <!-- <div class="mb-3">

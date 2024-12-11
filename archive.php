@@ -7,7 +7,7 @@ get_header();
     <div class="container-fluid mt-5 pt-3">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-9">
                     <div class="row">
                         <div class="col-12">
                             <div class="section-title-archive">

@@ -23,7 +23,7 @@
                     foreach ($contact_list as $data_list) {
                         // var_dump($data_list['contact_list_icon']);
                 ?>
-                     <div Class="font-weight-medium d-flex">
+                     <div Class="font-weight-medium text-white d-flex">
                          <i class=" <?php if (!empty($data_list['contact_list_icon']['icon-class'])) {
                                         echo htmlspecialchars($data_list['contact_list_icon']['icon-class']);
                                     } else {
@@ -40,8 +40,8 @@
                 }
                 ?>
 
-             <span class="mt-4 mb-3 text-white"><?php echo $Social_title ?></span>
-             <div class="d-flex justify-content-start">
+             <span class="mt-4 text-white"><?php echo $Social_title ?></span>
+             <div class="d-flex mt-4 justify-content-start">
                  <?php
 
                     if (!empty($social_icon_footer)) {
@@ -126,7 +126,7 @@
          </div>
      </div>
  </footer>
- <div class="container-fluid py-4 px-sm-3 px-md-5" style="background: #111111;">
+ <div class="container-fluid text-white py-4 px-sm-3 px-md-5" style="background: #111111;">
 
      <!-- copyright -->
      <?php echo  $change_copyright ?>

@@ -6,7 +6,7 @@ $args = new WP_Query(
     array(
         'post_type' => 'post',
         'posts_per_page' => 4,
-        'orderby' => 'date',
+        'orderby' => 'date',    // اصلاح شد
         'order' => 'DESC',
         'tax_query' => array(
             array(
