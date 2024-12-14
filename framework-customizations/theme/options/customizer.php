@@ -354,30 +354,30 @@ $options = array(
 
             ),
 
-            'Footer_column_four' => array(
+            // 'Footer_column_four' => array(
 
-                'title' => __('ستون چهارم', '{domain}'),
-                'options' => array(
+            //     'title' => __('ستون چهارم', '{domain}'),
+            //     'options' => array(
 
-                    'Footer_column_four_title' => array(
+            //         'Footer_column_four_title' => array(
 
-                        'label' => __('عنوان ستون چهارم', '{domain}'),
-                        'type' => 'text',
-                        'desc' => __('تغییر نام ستون چهارم', '{domain}'),
-                    ),
+            //             'label' => __('عنوان ستون چهارم', '{domain}'),
+            //             'type' => 'text',
+            //             'desc' => __('تغییر نام ستون چهارم', '{domain}'),
+            //         ),
 
-                    'footer_gallery' => array(
-                        'label' => __('تصاویر مورد نظر خود را انتخاب کنید', '{domain}'),
-                        'type' => 'multi-upload',
-                        'value' => array(),
-                        'desc' => __('از بخش مدیا تصاویر مورد نظر گالری را انتخاب کنید', '{domain}'),
-                        'images_only' => true,
-                    ),
+            //         'footer_gallery' => array(
+            //             'label' => __('تصاویر مورد نظر خود را انتخاب کنید', '{domain}'),
+            //             'type' => 'multi-upload',
+            //             'value' => array(),
+            //             'desc' => __('از بخش مدیا تصاویر مورد نظر گالری را انتخاب کنید', '{domain}'),
+            //             'images_only' => true,
+            //         ),
 
 
-                ),
+            //     ),
 
-            ),
+            // ),
 
             'Footer_copyright' => array(
                 'title' => __('کپی رایت', '{domain}'),

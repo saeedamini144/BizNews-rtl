@@ -15,7 +15,7 @@
     ?>
  <footer class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
      <div class="row py-4">
-         <div class="col-lg-3 col-md-6 mb-5">
+         <div class="col-lg-4 col-md-6 mb-5">
              <div class="mb-4 text-white"><?php echo $column_one_title ?></div>
 
              <?php
@@ -66,7 +66,7 @@
                     ?>
              </div>
          </div>
-         <div class="col-lg-3 col-md-6 mb-5">
+         <div class="col-lg-4 col-md-6 mb-5">
              <div class="mb-4 text-white "><?php echo $Footer_column_two_title ?></div>
 
              <!-- show the main slider -->
@@ -74,7 +74,7 @@
              <!-- show the main slider -->
 
          </div>
-         <div class="col-lg-3 col-md-6 mb-5">
+         <div class="col-lg-4 col-md-6 mb-5">
              <div class="mb-4 text-white "><?php echo $Footer_column_three_title ?></div>
              <div class="m-n1">
 
@@ -98,12 +98,12 @@
 
              </div>
          </div>
-         <div class="col-lg-3 col-md-6 mb-5">
+         <!-- <div class="col-lg-3 col-md-6 mb-5">
              <div class="mb-4 text-white "><?php echo $Footer_column_four_title ?></div>
-             <div class="row">
+             <div class="row"> -->
 
                  <!-- show gallery -->
-                 <?php
+                 <!-- <?php
 
                     if (!empty($footer_gallery)) {
                         foreach ($footer_gallery as $gallery) {
@@ -119,10 +119,10 @@
                         echo 'No photo';
                     }
 
-                    ?>
+                    ?> -->
                  <!-- show gallery -->
 
-             </div>
+             <!-- </div> -->
          </div>
      </div>
  </footer>
