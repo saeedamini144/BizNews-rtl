@@ -28,7 +28,7 @@ if (!empty($trending_news_category)) {
                 style="height: 110px">
                 <img
                     class="img-fluid"
-                    style="width: 110px; height: 100%;"
+                    style="width: 110px; height: 100%; object-fit: cover;"
                     src="<?php echo the_post_thumbnail_url(); ?> "
                     alt="" />
                 <div
@@ -41,7 +41,7 @@ if (!empty($trending_news_category)) {
                     </div>
                     <a
                         class="h6 m-0 text-secondary font-weight-bold"
-                        href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(), 10) ?></a>
+                        href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(), 5) ?></a>
                 </div>
             </div>
 <?php
