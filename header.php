@@ -44,7 +44,7 @@
                             </li>
                             <?php
                             wp_nav_menu(array(
-                                'theme_location' => 'header-menu',
+                                'theme_location' => 'topBar-menu',
                                 'container' => false,
                                 'menu_class' => 'navbar-nav ml-auto py-0', // تنظیم راست‌چین بودن منو
                                 'fallback_cb' => '__return_false',
