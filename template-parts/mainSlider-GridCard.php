@@ -23,7 +23,7 @@ if (!empty($Main_slider_GridCard)) {
         while ($args->have_posts()) {
             $args->the_post();
 ?>
-            <div class="col-md-6 px-0">
+            <div class="col-6 col-md-6 px-0">
                 <div
                     class="position-relative overflow-hidden"
                     style="height: 250px">
