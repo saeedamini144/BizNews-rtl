@@ -34,6 +34,9 @@ function theme_support_BizNews()
     add_theme_support('title-tag'); //dynamic site title
     add_theme_support('custom-logo'); //custom-logo
     add_theme_support('post-thumbnails'); //show the post images
+    add_theme_support('editor-styles'); // پشتیبانی از استایل‌های گوتنبرگ
+    add_theme_support('wp-block-styles'); // پشتیبانی از استایل پیش‌فرض بلوک‌ها
+    add_theme_support('responsive-embeds'); // پشتیبانی از جاسازی‌های ریسپانسیو
 }
 add_action('after_setup_theme', 'theme_support_BizNews');
 //add menu item
