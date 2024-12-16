@@ -157,7 +157,7 @@ get_header();
                                         $previous_post = get_previous_post();
                                         if (!empty($previous_post)): ?>
                                             <a href="<?php echo get_permalink($previous_post->ID); ?>">
-                                                پست قبلی
+                                                نوشته قبلی
                                             </a>
                                         <?php endif; ?>
                                     </div>
@@ -168,7 +168,7 @@ get_header();
                                         $next_post = get_next_post();
                                         if (!empty($next_post)): ?>
                                             <a href="<?php echo get_permalink($next_post->ID); ?>">
-                                                پست بعدی
+                                                نوشته بعدی
                                             </a>
                                         <?php endif; ?>
                                     </div>
