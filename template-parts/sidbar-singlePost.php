@@ -41,7 +41,7 @@ if (!empty($trending_news_category)) {
                     </div>
                     <a
                         class="h6 m-0 text-secondary font-weight-bold"
-                        href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(), 5) ?></a>
+                        href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                 </div>
             </div>
 <?php

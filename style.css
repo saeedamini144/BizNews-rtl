@@ -418,13 +418,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
   
   h4, .h4 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2rem;
   }
   
   @media (max-width: 1200px) {
     h4, .h4 {
-      font-size: 1.1rem ;
+      font-size: 0.9rem ;
       line-height: 2rem;  
       }
   }
@@ -435,8 +435,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
   
   h6, .h6 {
-    font-size: 1rem;
-    line-height: 2rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
   }
   
   .lead {

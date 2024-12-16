@@ -34,7 +34,7 @@ if ($args->have_posts()) {
                     <span class="text-white" href=""><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></span>
                 </div>
                 <a class="h2 m-0 text-white  font-weight-bold" href="<?php echo get_permalink(); ?>">
-                    <?php echo wp_trim_words(get_the_title(), 10); ?>
+                    <?php the_title(); ?>
                 </a>
             </div>
         </div>

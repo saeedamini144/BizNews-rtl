@@ -33,7 +33,7 @@ if (!empty($choose_category)) {
                     <a class="badge badge-primary font-weight-semi-bold p-1 ml-2" href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name ?></a>
                     <span class="text-body"><small><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></small></span>
                 </div>
-                <a class="small text-body font-weight-medium" href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(), 10) ?></a>
+                <a class="small text-body font-weight-medium" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
             </div>
 
 <?php
