@@ -5,17 +5,17 @@ get_header();
 <body>
     <div class="container-fluid">
         <div class="container">
-            <div class="row pt-5">
-                <!-- BreadCrumb -->
-                <div class="section-title section-title-breadcrumb col-lg-12 col-md-12 align-middle">
-                    <?php
-                    if (function_exists('yoast_breadcrumb')) {
-                        yoast_breadcrumb('<p id="breadcrumbs" class="mt-2">', '</p>');
-                    }
-                    ?>
-                </div>
-                <!-- BreadCrumb -->
-                <div class="col-lg-9 col-md-12">
+            <!-- BreadCrumb -->
+            <div class="section-title section-title-breadcrumb col-lg-12 col-md-12 align-middle mt-5">
+                <?php
+                if (function_exists('yoast_breadcrumb')) {
+                    yoast_breadcrumb('<p id="breadcrumbs" class="mt-2">', '</p>');
+                }
+                ?>
+            </div>
+            <!-- BreadCrumb -->
+            <div class="row test">
+                <div class=" col-lg-9">
                     <!-- News Detail Start -->
                     <div class="position-relative mb-3 ">
 
@@ -27,7 +27,7 @@ get_header();
                                 <!-- Post title -->
 
                                 <!-- Post feature image -->
-                                <img class="feature-image w-100 mb-3" src="<?php echo get_the_post_thumbnail_url(); ?>" >
+                                <img class="feature-image w-100 mb-3" src="<?php echo get_the_post_thumbnail_url(); ?>">
                                 <!-- Post feature image -->
 
                             </div>
@@ -174,7 +174,6 @@ get_header();
                                     </div>
                                 </div>
                                 <!-- post change -->
-
                             </div>
                             <!-- Post Content -->
 
@@ -192,21 +191,19 @@ get_header();
                             <p><?php the_author_meta('description') ?></p>
                         </div>
                     </div>
-                </div>
-                <!-- Sidebar -->
-                <?php get_template_part('/template-parts/sidbar', 'main') ?>
-                <!-- Sidebar -->
-            </div>
-        </div>
-        <div class="container">
-            <div class=" row pt-5">
-                <div class="col-12">
                     <!-- Comments -->
                     <?php comments_template('/comments.php'); ?>
                     <!-- Comments -->
+                      <!-- Sidebar -->
+                <?php get_template_part('/template-parts/sidbar', 'main') ?>
+                <!-- Sidebar -->
                 </div>
+
+               
+
             </div>
         </div>
+
     </div>
 </body>
 

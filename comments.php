@@ -5,47 +5,59 @@ if (post_password_required()) {
 ?>
 
 <!-- Comment List Start -->
-<div class=" mb-3">
-    <div class="section-title mb-0">
-        <span class="m-0 font-weight-bold">
-            <?php echo get_comments_number(); ?> نظرات
-        </span>
-    </div>
-    <div class="bg-white border border-top-0 p-4">
-        <?php
-        wp_list_comments(array(
-            'style'      => 'div',
-            'short_ping' => true,
-            'callback'   => 'custom_comment_list'
-        ));
-        ?>
+<div class="row">
+    <div class="col-lg-12">
+        <div class=" mb-3">
+            <div class="section-title mb-0">
+                <span class="m-0 font-weight-bold">
+                    <?php comments_number('بدون نظر', '1 نظر', '% نظرات'); ?> </span>
+            </div>
+            <ul class="bg-white border border-top-0 p-4">
+                <?php
+                wp_list_comments(array(
+                    'style'      => 'ul',
+                    'short_ping' => true,
+                    'avatar_size' => 50,
+                    'callback'   => 'custom_comment_template'
+                ));
+                ?>
+            </ul>
+            <?php
+            if (get_comment_pages_count() > 1 && get_option('page_comments')) {
+                echo '<nav class="comment-navigation">';
+                paginate_comments_links();
+                echo '</nav>';
+            }
+            ?>
+        </div>
     </div>
 </div>
-<!-- Comment List End -->
 
 <!-- Comment Form Start -->
-<div class=" mb-3">
-    <div class="section-title mb-0">
-        <div class="m-0 font-weight-bold">دیدگاه شما برای ما ارزشمند است</div>
-    </div>
-    <div class="bg-white border-top-0 p-4">
-        <?php
-        comment_form(array(
-            'fields' => array(
-                'author' => '<div class="form-row"><div class="col-sm-6"><div class="form-group">
+<div class="row">
+    <div class="col-lg-12">
+        <div class=" mb-3">
+            <div class="section-title mb-0">
+                <p class="m-0 font-weight-bold">دیدگاه شما برای ما ارزشمند است</p>
+            </div>
+            <div class="bg-white border-top-0 p-4">
+                <?php
+                comment_form(array(
+                    'fields' => array(
+                        'author' => '<div class="form-row"><div class="col-sm-6"><div class="form-group">
                                 <label for="name">نام *</label>
                                 <input type="text" class="form-control" id="name" name="author" required>
                             </div></div>',
-                'email'  => '<div class="col-sm-6"><div class="form-group">
+                        'email'  => '<div class="col-sm-6"><div class="form-group">
                                 <label for="email">ایمیل *</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div></div></div>',
-                'url'    => '<div class="form-group">
+                        'url'    => '<div class="form-group">
                                 <label for="website">وبسایت</label>
                                 <input type="url" class="form-control" id="website" name="url">
                             </div>',
-            ),
-            'comment_field' => '<div class="form-group">
+                    ),
+                    'comment_field' => '<div class="form-group">
                         <label for="message">پیغام *</label>
                         <textarea id="message" name="comment" cols="30" rows="5" class="form-control" required></textarea>
                     </div>
@@ -59,13 +71,16 @@ if (post_password_required()) {
                                 <option value="1">⭐ - بسیار ضعیف</option>
                             </select>
                     </div>',
-            'submit_button' => '<div class="form-group mb-0">
+                    'submit_button' => '<div class="form-group mb-0">
                                     <input type="submit" value="ارسال دیدگاه" class="btn btn-primary font-weight-semi-bold py-2 px-3">
                                 </div>',
-        ));
-        ?>
+                ));
+                ?>
+            </div>
+        </div>
     </div>
 </div>
+
 <!-- Comment Form End -->
 
 <?php
@@ -79,7 +94,7 @@ add_action('comment_post', function ($comment_id) {
 
 
 
-function custom_comment_list($comment, $args, $depth)
+function custom_comment_template($comment, $args, $depth)
 {
     $rating = get_comment_meta($comment->comment_ID, 'rating', true); // گرفتن امتیاز کاربر
 ?>
@@ -129,3 +144,5 @@ function custom_comment_list($comment, $args, $depth)
 }
 
 ?>
+</div>
+<!-- Comment List End -->
