@@ -19,13 +19,48 @@ $options = array(
                         'help' => __('اندازه بنر می بایست 728 در 90 پیکسل باشد', '{domain}'),
                         'images_only' => true,
                     ),
-                    
-                    'Mobile_logo'=>array(
 
-                        'label'=>__('آپلود لوگو موبایل','{domain}'),
-                        'type'=>'upload',
-                        'images_only'=>true,
-                        'help'=>__('به دلیل نمایش هدر مشکی در موبایل لوگو سایت در حالت موبایل را روشن انتخاب کنید','domain'),
+                    'Banner_header_link' => array(
+
+                        'label' => __('لینک بنر هدر', '{domain}'),
+                        'type' => 'text',
+                        'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
+
+                    ),
+
+                    'Banner_header_alt' => array(
+
+                        'label' => __('alt بنر تبلیغاتی', '{domain}'),
+                        'type' => 'text',
+                        'desc' => __('قرار دادن alt', '{domain}'),
+                        'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
+
+                    ),
+
+                    'Banner_header_rel' => array(
+
+                        'label' => __('فالو یا نو فالو', '{domain}'),
+                        'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
+                        'type'  => 'select',
+                        'value' => ' ',
+                        'choices' => array(
+                            'follow' => __('follow', '{domain}'),
+                            'nofollow' => __('nofollow', '{domain}')
+                        ),
+                        /**
+                         * Allow save not existing choices
+                         * Useful when you use the select to populate it dynamically from js
+                         */
+                        'no-validate' => false,
+
+                    ),
+
+                    'Mobile_logo' => array(
+
+                        'label' => __('آپلود لوگو موبایل', '{domain}'),
+                        'type' => 'upload',
+                        'images_only' => true,
+                        'help' => __('به دلیل نمایش هدر مشکی در موبایل لوگو سایت در حالت موبایل را روشن انتخاب کنید', 'domain'),
                     ),
 
                 ),
@@ -165,6 +200,41 @@ $options = array(
                         'help' => __('اندازه بنر می بایست 728 در 90 پیکسل باشد', '{domain}'),
                         'images_only' => true,
                     ),
+
+                    'Banner_ads_one_link' => array(
+
+                        'label' => __('لینک بنر ', '{domain}'),
+                        'type' => 'text',
+                        'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
+        
+                    ),
+        
+                    'Banner_ads_one_alt' => array(
+        
+                        'label' => __('alt بنر تبلیغاتی', '{domain}'),
+                        'type' => 'text',
+                        'desc' => __('قرار دادن alt', '{domain}'),
+                        'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
+        
+                    ),
+        
+                    'Banner_ads_one_rel' => array(
+        
+                        'label' => __('فالو یا نو فالو', '{domain}'),
+                        'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
+                        'type'  => 'select',
+                        'value' => ' ',
+                        'choices' => array(
+                            'follow' => __('follow', '{domain}'),
+                            'nofollow' => __('nofollow', '{domain}')
+                        ),
+                        /**
+                         * Allow save not existing choices
+                         * Useful when you use the select to populate it dynamically from js
+                         */
+                        'no-validate' => false,
+        
+                    ),
                 ),
             ),
 
@@ -172,11 +242,11 @@ $options = array(
                 'title' => __('ویرایش بخش میانی صفحه اصلی', '{domain}'),
                 'options' => array(
 
-                    'middle_content_title'=>array(
+                    'middle_content_title' => array(
 
-                        'label'=>__('عنوان مورد نظر خود را وارد کنید','{domain}'),
-                        'desc'=>__('می توانید عنوان بخش را تغییر دهید','{domain}'),
-                        'type'=>'text',
+                        'label' => __('عنوان مورد نظر خود را وارد کنید', '{domain}'),
+                        'desc' => __('می توانید عنوان بخش را تغییر دهید', '{domain}'),
+                        'type' => 'text',
                     ),
 
                     'middle_content' => array(
@@ -196,6 +266,43 @@ $options = array(
                         'help' => __('اندازه بنر می بایست 728 در 90 پیکسل باشد', '{domain}'),
                         'images_only' => true,
                     ),
+
+                    
+                    'Banner_ads_two_link' => array(
+
+                        'label' => __('لینک بنر ', '{domain}'),
+                        'type' => 'text',
+                        'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
+        
+                    ),
+        
+                    'Banner_ads_two_alt' => array(
+        
+                        'label' => __('alt بنر تبلیغاتی', '{domain}'),
+                        'type' => 'text',
+                        'desc' => __('قرار دادن alt', '{domain}'),
+                        'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
+        
+                    ),
+        
+                    'Banner_ads_two_rel' => array(
+        
+                        'label' => __('فالو یا نو فالو', '{domain}'),
+                        'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
+                        'type'  => 'select',
+                        'value' => ' ',
+                        'choices' => array(
+                            'follow' => __('follow', '{domain}'),
+                            'nofollow' => __('nofollow', '{domain}')
+                        ),
+                        /**
+                         * Allow save not existing choices
+                         * Useful when you use the select to populate it dynamically from js
+                         */
+                        'no-validate' => false,
+        
+                    ),
+
                 ),
             ),
 
@@ -203,11 +310,11 @@ $options = array(
                 'title' => __('بخش آخر صفحه اصلی', '{domain}'),
                 'options' => array(
 
-                    'Last_content_title'=>array(
+                    'Last_content_title' => array(
 
-                        'label'=>__('عنوان مورد نظر خود را وارد کنید','{domain}'),
-                        'desc'=>__('می توانید عنوان بخش را تغییر دهید','{domain}'),
-                        'type'=>'text',
+                        'label' => __('عنوان مورد نظر خود را وارد کنید', '{domain}'),
+                        'desc' => __('می توانید عنوان بخش را تغییر دهید', '{domain}'),
+                        'type' => 'text',
                     ),
 
                     'Last_content' => array(
@@ -414,11 +521,48 @@ $options = array(
             ),
 
             'sidbar_banner_adds' => array(
+
                 'label' => __('آپلود بنر تبلیغاتی', '{domain}'),
                 'desc' => __('بنر تبلیغاتی سایدبار', '{domain}'),
                 'help' => __('اندزه بنر می بایست 410 در 250 پیکسل باشد'),
                 'type' => 'upload',
                 'images_only' => true,
+
+            ),
+
+            'Banner_sidebar_link' => array(
+
+                'label' => __('لینک بنر ', '{domain}'),
+                'type' => 'text',
+                'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
+
+            ),
+
+            'Banner_sidebar_alt' => array(
+
+                'label' => __('alt بنر تبلیغاتی', '{domain}'),
+                'type' => 'text',
+                'desc' => __('قرار دادن alt', '{domain}'),
+                'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
+
+            ),
+
+            'Banner_sidebar_rel' => array(
+
+                'label' => __('فالو یا نو فالو', '{domain}'),
+                'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
+                'type'  => 'select',
+                'value' => ' ',
+                'choices' => array(
+                    'follow' => __('follow', '{domain}'),
+                    'nofollow' => __('nofollow', '{domain}')
+                ),
+                /**
+                 * Allow save not existing choices
+                 * Useful when you use the select to populate it dynamically from js
+                 */
+                'no-validate' => false,
+
             ),
 
             'trending_sidbar' => array(

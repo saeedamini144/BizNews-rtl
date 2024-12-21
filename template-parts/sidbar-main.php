@@ -4,6 +4,9 @@ $add_title = fw_get_db_customizer_option('add_title');
 $sidbar_banner_adds = fw_get_db_customizer_option('sidbar_banner_adds');
 $trending_sidbar = fw_get_db_customizer_option('trending_sidbar');
 $show_category = fw_get_db_customizer_option('show_category');
+$Banner_sidebar_link = fw_get_db_customizer_option('Banner_sidebar_link');
+$Banner_sidebar_alt = fw_get_db_customizer_option('Banner_sidebar_alt');
+$Banner_sidebar_rel = fw_get_db_customizer_option('Banner_sidebar_rel');
 ?>
 
 <aside class="col-lg-3">
@@ -78,10 +81,17 @@ $show_category = fw_get_db_customizer_option('show_category');
                 <span class="m-0 "><?php echo $add_title ?></span>
             </div>
             <div class="bg-white text-center border border-top-0 p-3">
-                <a href=""><img
+                <a href="<?php echo $Banner_sidebar_link; ?>" rel="<?php echo $Banner_sidebar_rel ?>" target="_blank">
+                    <img
                         class="img-fluid"
-                        src="<?php echo $sidbar_banner_adds['url'] ?>"
-                        alt="" /></a>
+                        src="<?php if (!empty($sidbar_banner_adds)) {
+                                    echo $sidbar_banner_adds['url'];
+                                } else {
+                                    echo " ";
+                                }
+                                ?>"
+                        alt="<?php echo $Banner_sidebar_alt; ?>" />
+                </a>
             </div>
         </div>
         <!-- Ads End -->

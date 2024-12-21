@@ -5,7 +5,13 @@ $Breaking_news_title = fw_get_db_customizer_option('Breaking_news_title');
 $Featured_News_title = fw_get_db_customizer_option('Featured_News_title');
 $Latest_News_title = fw_get_db_customizer_option('Latest_News_title');
 $Banner_main_ads_one = fw_get_db_customizer_option('Banner_main_ads_one');
+$Banner_ads_one_link = fw_get_db_customizer_option('Banner_ads_one_link');
+$Banner_ads_one_alt  = fw_get_db_customizer_option('Banner_ads_one_alt');
+$Banner_ads_one_rel = fw_get_db_customizer_option('Banner_ads_one_rel');
 $Banner_main_ads_two = fw_get_db_customizer_option('Banner_main_ads_two');
+$Banner_ads_two_link = fw_get_db_customizer_option('Banner_ads_two_link');
+$Banner_ads_two_alt = fw_get_db_customizer_option('Banner_ads_two_alt');
+$Banner_ads_two_rel = fw_get_db_customizer_option('Banner_ads_two_rel');
 $Last_content_title = fw_get_db_customizer_option('Last_content_title');
 $middle_content_title = fw_get_db_customizer_option('middle_content_title');
 
@@ -99,11 +105,13 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
 
                         <!-- Banner_main_ads_one -->
                         <div class="col-lg-12 mb-3">
-                            <a href=""><img class="img-fluid w-100" src="<?php if (!empty($Banner_main_ads_one)) {
-                                                                                echo $Banner_main_ads_one['url'];
-                                                                            } else
-                                                                                echo '';
-                                                                            ?>" alt="" />
+                            <a rel="<?php echo $Banner_ads_one_rel ?>" href="<?php echo $Banner_ads_one_link; ?>" target="_blank">
+                                <img alt="<?php echo $Banner_ads_one_alt?>" class="img-fluid w-100" src="<?php if (!empty($Banner_main_ads_one)) {
+                                                                        echo $Banner_main_ads_one['url'];
+                                                                    } else
+                                                                        echo '';
+                                                                    ?>"
+                                 />
                             </a>
                         </div>
                         <!-- Banner_main_ads_one -->
@@ -119,12 +127,14 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
 
                         <!-- Banner_main_ads_two -->
                         <div class="col-lg-12 mb-3">
-                            <a href=""><img class="img-fluid w-100" src="<?php if (!empty($Banner_main_ads_two)) {
-                                                                                echo $Banner_main_ads_two['url'];
-                                                                            } else {
-                                                                                echo 'No banner ads';
-                                                                            }
-                                                                            ?>" alt="" />
+                            <a href="<?php echo $Banner_ads_two_link; ?>" rel="<?php echo $Banner_ads_two_rel; ?>" target="_blank">
+                                <img class="img-fluid w-100" src="<?php if (!empty($Banner_main_ads_two)) {
+                                                                        echo $Banner_main_ads_two['url'];
+                                                                    } else {
+                                                                        echo 'No banner ads';
+                                                                    }
+                                                                    ?>" alt="<?php echo $Banner_ads_two_alt ?>" 
+                                />
                             </a>
                         </div>
                         <!-- Banner_main_ads_two -->
@@ -153,4 +163,5 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
 <?php
 get_footer();
 ?>
+
 </html>

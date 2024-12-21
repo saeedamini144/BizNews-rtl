@@ -10,6 +10,9 @@
     $Banner_header = fw_get_db_customizer_option('Banner_header');
     $Social_icon = fw_get_db_customizer_option('Social_icon');
     $Mobile_logo = fw_get_db_customizer_option('Mobile_logo');
+    $Banner_header_link = fw_get_db_customizer_option('Banner_header_link');
+    $Banner_header_alt = fw_get_db_customizer_option('Banner_header_alt');
+    $Banner_header_rel = fw_get_db_customizer_option('Banner_header_rel');
 
     ?>
 </head>
@@ -96,7 +99,7 @@
                     </figure>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
-                    <a href="#">
+                    <a rel="<?php echo $Banner_header_rel ?>" href="<?php echo $Banner_header_link; ?>" target="_blank" >
                         <img class="img-fluid" src="<?php
                                                     if (!empty($Banner_header)) {
                                                         echo $Banner_header["url"];
@@ -105,7 +108,7 @@
                                                         echo " ";
                                                     }
                                                     ?>
-                " alt="" />
+                " alt="<?php echo $Banner_header_alt; ?>">
                     </a>
                 </div>
             </div>
