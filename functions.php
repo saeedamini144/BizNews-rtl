@@ -114,7 +114,6 @@ class Custom_Navwalker extends Walker_Nav_Menu
     }
 }
 
-
 //call fontawsome to show the template
 
 function _custom_packs_list($current_packs)
@@ -242,7 +241,7 @@ function display_average_rating($post_id) {
     echo '</div>';
 }
 
-///change replay title comments
+///change replay title comments tag
 
 function custom_comment_form_defaults($defaults) {
     // تغییر تگ comment-reply-title به h4

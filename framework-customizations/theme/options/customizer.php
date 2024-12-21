@@ -19,7 +19,14 @@ $options = array(
                         'help' => __('اندازه بنر می بایست 728 در 90 پیکسل باشد', '{domain}'),
                         'images_only' => true,
                     ),
+                    
+                    'Mobile_logo'=>array(
 
+                        'label'=>__('آپلود لوگو موبایل','{domain}'),
+                        'type'=>'upload',
+                        'images_only'=>true,
+                        'help'=>__('به دلیل نمایش هدر مشکی در موبایل لوگو سایت در حالت موبایل را روشن انتخاب کنید','domain'),
+                    ),
 
                 ),
             ),

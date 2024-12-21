@@ -9,6 +9,7 @@
 
     $Banner_header = fw_get_db_customizer_option('Banner_header');
     $Social_icon = fw_get_db_customizer_option('Social_icon');
+    $Mobile_logo = fw_get_db_customizer_option('Mobile_logo');
 
     ?>
 </head>
@@ -117,18 +118,26 @@
 
             <figure class="d-lg-none">
                 <?php
-                $custom_logo_id = get_theme_mod('custom_logo');
-                $logo = wp_get_attachment_image_url($custom_logo_id);
-                if (has_custom_logo()) {
+                if (!empty($Mobile_logo)) {
                 ?>
-                    <a href="<?php home_url() ?>"><img src="<?php echo esc_url($logo) ?>" alt="<?php get_bloginfo('name') ?>"></a>
-                    <!-- <?php var_dump($logo) ?> -->
+                    <a href="<?php echo home_url(); ?>"><img src="<?php echo $Mobile_logo["url"] ?>" alt="<?php get_bloginfo('name') ?>"></a>
                 <?php
                 } else {
-                    echo get_bloginfo('name');
+                    echo '';
                 }
 
                 ?>
+                <!-- <?php
+                        $custom_logo_id = get_theme_mod('custom_logo');
+                        $logo = wp_get_attachment_image_url($custom_logo_id);
+                        if (has_custom_logo()) {
+                        ?>
+                    <a href="<?php home_url() ?>"><img src="<?php echo esc_url($logo) ?>" alt="<?php get_bloginfo('name') ?>"></a>
+                <?php
+                        } else {
+                            echo get_bloginfo('name');
+                        }
+                ?> -->
             </figure>
 
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">

@@ -17,7 +17,7 @@ if (post_password_required()) {
                 wp_list_comments(array(
                     'style'      => 'ul',
                     'short_ping' => true,
-                    'avatar_size' => 50,
+                    // 'avatar_size' => 50,
                     'callback'   => 'custom_comment_template'
                 ));
                 ?>
@@ -102,9 +102,8 @@ function custom_comment_template($comment, $args, $depth)
 
         <!-- تصویر نویسنده -->
         <img src="<?php echo get_avatar_url($comment, array('size' => 45)); ?>" alt="Author-Image" class="img-fluid mr-3 mt-1 rounded-circle" style="width: 45px;">
-
         <!-- نام نویسنده -->
-        <span class="text-secondary font-weight-bold pr-4" href=""><?php comment_author(); ?></span>
+        <span class="text-secondary font-weight-bold pr-4"><?php comment_author(); ?></span>
 
         <!-- نمایش امتیاز (ستاره‌ها) -->
         <span class="text-warning">
