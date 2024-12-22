@@ -72,13 +72,22 @@ add_action("wp_enqueue_scripts", "register_style_BizNews");
 function register_scripts_BizNews()
 {
     wp_enqueue_script('jquery');
-    wp_enqueue_script("BootstrapJS", "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js", array(), "4.4.1", true);
+    wp_enqueue_script("BootstrapJS", get_template_directory_uri() . "/js/bundle.min.js", array(), "4.4.1", true);
+    // wp_enqueue_script("BootstrapJS", "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js", array(), "4.4.1", true);
     wp_enqueue_script("easing", get_template_directory_uri() . "/lib/easing/easing.min.js", array("jquery"), "1.4.1", true);
     wp_enqueue_script("owlJS", get_template_directory_uri() . "/lib/owlcarousel/owl.carousel.min.js", array("jquery"), "2.2.1", true);
     wp_enqueue_script("mainJS", get_template_directory_uri() . "/js/main.js", array("jquery"), " ", true);
 }
 add_action("wp_enqueue_scripts", "register_scripts_BizNews");
 
+//Load scripts in single.php
+function single_post_scripts_load(){
+    if(is_single()){
+        wp_enqueue_script('toc_script' , get_template_directory_uri() . '/js/post-script.js' , array(), '1.0' , true);
+    }
+}
+add_action('wp_enqueue_scripts' , 'single_post_scripts_load');
+//Load scripts in single.php
 
 //Tobar menu Use the navwalker
 class Custom_Navwalker extends Walker_Nav_Menu
