@@ -48,14 +48,15 @@
                         if (!empty($social_icon_footer)) {
                             foreach ($social_icon_footer as $icon_footer) {
                         ?>
-                             <a class="btn btn-lg btn-secondary btn-lg-square ml-2" href="<?php echo $icon_footer['social_icon_link'] ?>"><i class="fab <?php if (!empty($icon_footer['social_icon']['icon-class'])) {
-                                                                                                                                                            echo $icon_footer['social_icon']['icon-class-without-root'];
-                                                                                                                                                            // var_dump($icon_footer['social_icon']);
-                                                                                                                                                        } else {
-                                                                                                                                                            echo '';
-                                                                                                                                                        }
-                                                                                                                                                        ?>">
-                                 </i></a>
+                             <a class="btn btn-lg btn-secondary btn-lg-square ml-2" href="<?php echo $icon_footer['social_icon_link'] ?>" aria-label="social-logo"><i class="fab <?php if (!empty($icon_footer['social_icon']['icon-class'])) {
+                                                                                                                                                                                        echo $icon_footer['social_icon']['icon-class-without-root'];
+                                                                                                                                                                                        // var_dump($icon_footer['social_icon']);
+                                                                                                                                                                                    } else {
+                                                                                                                                                                                        echo '';
+                                                                                                                                                                                    }
+                                                                                                                                                                                    ?>">
+                                 </i>
+                             </a>
 
                      <?php
                             }

@@ -26,7 +26,7 @@
                     src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>"
                     width="25"
                     height="25"
-                    alt=" " />
+                    alt="Author-image " />
                 <small><?php the_author() ?></small>
             </div>
             <div class="d-flex align-items-center">

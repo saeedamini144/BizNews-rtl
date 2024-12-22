@@ -66,7 +66,7 @@
                                 foreach ($Social_icon as $Icon) {
                             ?>
                                     <li class="nav-item">
-                                        <a class="nav-link text-body" href="<?php echo $Icon['icon_Link'] ?>"><small class="fab <?php echo $Icon['icon_Name'] ?>"></small></a>
+                                        <a class="nav-link text-body" href="<?php echo $Icon['icon_Link'] ?>" aria-label="social-logo"><small class="fab <?php echo $Icon['icon_Name'] ?>"></small></a>
                                     </li>
                             <?php
                                 }
@@ -88,7 +88,7 @@
                         $logo = wp_get_attachment_image_url($custom_logo_id);
                         if (has_custom_logo()) {
                         ?>
-                            <a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url($logo) ?>" alt="<?php get_bloginfo('name') ?>"></a>
+                            <a href="<?php echo home_url(); ?>" aria-label="Logo"><img src="<?php echo esc_url($logo) ?>" alt="<?php get_bloginfo('name') ?>"></a>
                             <!-- <?php var_dump($logo) ?> -->
                         <?php
                         } else {
@@ -123,7 +123,7 @@
                 <?php
                 if (!empty($Mobile_logo)) {
                 ?>
-                    <a href="<?php echo home_url(); ?>"><img src="<?php echo $Mobile_logo["url"] ?>" alt="<?php get_bloginfo('name') ?>"></a>
+                    <a href="<?php echo home_url();  ?>" aria-label="Logo"><img src="<?php echo $Mobile_logo["url"] ?>" alt="<?php get_bloginfo('name') ?>"></a>
                 <?php
                 } else {
                     echo '';

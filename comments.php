@@ -101,7 +101,7 @@ function custom_comment_template($comment, $args, $depth)
     <div class="bg-white border-top p-4 media mb-2">
 
         <!-- تصویر نویسنده -->
-        <img src="<?php echo get_avatar_url($comment, array('size' => 45)); ?>" alt="Author-Image" class="img-fluid mr-3 mt-1 rounded-circle" style="width: 45px;">
+        <img src="<?php echo get_avatar_url($comment, array('size' => 45)); ?>" alt="Author-image" class="img-fluid mr-3 mt-1 rounded-circle" style="width: 45px;">
         <!-- نام نویسنده -->
         <span class="text-secondary font-weight-bold pr-4"><?php comment_author(); ?></span>
 
