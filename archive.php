@@ -11,7 +11,7 @@ get_header();
                     <div class="row">
                         <div class="col-12">
                             <div class="section-title-archive">
-                                <h4 class="m-0 text-uppercase font-weight-bold">
+                                <h1 class="m-0 text-uppercase font-weight-bold">
                                     <?php
                                     if (is_category()) {
                                         echo single_cat_title();
@@ -24,7 +24,7 @@ get_header();
                                         echo  get_the_author();
                                     }
                                     ?>
-                                </h4>
+                                </h1>
                                 <?php
                                 if (function_exists('yoast_breadcrumb')) {
                                     yoast_breadcrumb('<p id="breadcrumbs" class="mt-2">', '</p>');
