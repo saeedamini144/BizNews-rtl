@@ -10074,3 +10074,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
   font-size: 1rem !important;
     line-height: 1.2rem;
 }
+
+/* change bootstrap burger menu color */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24' /%3E%3C/svg%3E") !important;
+}
+.navbar-dark .navbar-toggler{
+  border-color: white;
+}
+/*change bootstrap burger menu color */
