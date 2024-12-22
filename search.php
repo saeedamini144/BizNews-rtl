@@ -14,7 +14,7 @@ get_header();
                             <div class="section-title">
                                 <h4 class="m-0 text-uppercase font-weight-bold"> نتایج جستجو :
                                     <?php
-                                        echo get_search_query()
+                                    echo get_search_query()
                                     ?>
                                 </h4>
                                 <!-- <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a> -->
@@ -53,8 +53,8 @@ get_header();
                             <?php
                             the_posts_pagination(array(
                                 'mid_size'  => 2,
-                                'prev_text' => __('Previous', 'textdomain'),
-                                'next_text' => __('Next', 'textdomain'),
+                                'prev_text' => __('&#8594;', 'textdomain'),
+                                'next_text' => __('&#8592;', 'textdomain'),
                             ));
                             ?>
 
