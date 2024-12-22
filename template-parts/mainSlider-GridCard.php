@@ -36,7 +36,7 @@ if (!empty($Main_slider_GridCard)) {
                             <a
                                 class="badge badge-primary  font-weight-semi-bold p-2 ml-2"
                                 href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name ?></a>
-                            <span class="text-white" href=""><small><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></small></span>
+                            <span class="text-white" ><small><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></small></span>
                         </div>
                         <a
                             class="h6 m-0 text-white font-weight-semi-bold"

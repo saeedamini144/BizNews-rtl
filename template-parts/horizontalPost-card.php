@@ -29,7 +29,7 @@ if (!empty($middle_content)) {
                     <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-right-0">
                         <div class="mb-2">
                             <a class="badge badge-primary font-weight-semi-bold p-1 ml-2" href="<?php echo get_category_link(get_the_category()[0]->term_id); ?>"><?php echo get_the_category()[0]->name; ?></a>
-                            <a class="text-body" href="<?php the_permalink(); ?>"><small><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></small></a>
+                            <span><small><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></small></span>
                         </div>
                         <a class="h6 m-0 text-secondary font-weight-bold" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </div>

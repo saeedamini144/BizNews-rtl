@@ -37,7 +37,7 @@
                                  <a
                                      class="badge badge-primary font-weight-semi-bold p-2 ml-2"
                                      href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name ?></a>
-                                 <span class="text-body" href=""><small><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></small></span>
+                                 <span><small><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></small></span>
                              </div>
                              <a
                                  class="h4 d-block mb-3 text-secondary font-weight-bold"
@@ -54,7 +54,7 @@
                                      src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>"
                                      width="25"
                                      height="25"
-                                     alt=" " />
+                                     alt="Author-image" />
                                  <small><?php the_author() ?></small>
                              </div>
                              <div class="d-flex align-items-center">
@@ -75,7 +75,7 @@
                          <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-right-0">
                              <div class="mb-2">
                                  <a class="badge badge-primary font-weight-semi-bold p-1 ml-2" href="<?php echo get_category_link(get_the_category()[0]->term_id); ?>"><?php echo get_the_category()[0]->name; ?></a>
-                                 <a class="text-body" href="<?php the_permalink(); ?>"><small><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></small></a>
+                                 <span><small><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></small></span>
                              </div>
                              <a class="h6 m-0 text-secondary font-weight-bold" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                          </div>
