@@ -32,7 +32,7 @@
                              <img
                                  class="img-fluid h-100"
                                  src="<?php echo the_post_thumbnail_url(); ?>"
-                                 style="object-fit: cover; height: 240px;" />
+                                 style="object-fit: cover; height: 240px;" alt="<?php the_title(); ?>" />
                          </div>
                          <div
                              class="col-md-6 d-flex flex-column border bg-white h-100 px-0">

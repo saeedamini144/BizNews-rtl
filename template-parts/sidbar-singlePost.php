@@ -30,7 +30,7 @@ if (!empty($trending_news_category)) {
                     class="img-fluid"
                     style="width: 110px; height: 100%; object-fit: cover;"
                     src="<?php echo the_post_thumbnail_url(); ?> "
-                    alt="" />
+                    alt="<?php the_title(); ?>" />
                 <div
                     class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-right-0">
                     <div class="mb-2">

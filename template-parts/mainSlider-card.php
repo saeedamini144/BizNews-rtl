@@ -25,7 +25,7 @@ if ($args->have_posts()) {
 ?>
 
         <div class="position-relative overflow-hidden" style="height: 500px">
-            <img class="img-fluid h-100" src="<?php echo get_the_post_thumbnail_url(); ?>" style="object-fit: cover" />
+            <img class="img-fluid h-100" src="<?php echo get_the_post_thumbnail_url(); ?>" style="object-fit: cover" alt="<?php the_title(); ?>" />
             <div class="overlay">
                 <div class="mb-2">
                     <a class="badge badge-primary  font-weight-semi-bold p-2 ml-2" href="<?php echo get_category_link(get_the_category()[0]->term_id); ?>">

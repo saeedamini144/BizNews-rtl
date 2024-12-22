@@ -30,7 +30,7 @@ if (!empty($Main_slider_GridCard)) {
                     <img
                         class="img-fluid w-100 h-100"
                         src="<?php echo get_the_post_thumbnail_url() ?>"
-                        style="object-fit: cover" />
+                        style="object-fit: cover" alt="<?php the_title(); ?>"  />
                     <div class="overlay">
                         <div class="mb-2">
                             <a
