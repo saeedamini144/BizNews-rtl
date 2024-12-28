@@ -21,7 +21,8 @@ add_filter('fw:option_type:icon-v2:filter_packs', '_custom_packs_list');
 
 //jalali date
 require_once get_template_directory() . '/inc/jdatetime.class.php';
-function display_jalali_date($format, $timestamp = null) {
+function display_jalali_date($format, $timestamp = null)
+{
     if (is_null($timestamp)) {
         $timestamp = current_time('timestamp');
     }
@@ -81,12 +82,13 @@ function register_scripts_BizNews()
 add_action("wp_enqueue_scripts", "register_scripts_BizNews");
 
 //Load scripts in single.php
-function single_post_scripts_load(){
-    if(is_single()){
-        wp_enqueue_script('toc_script' , get_template_directory_uri() . '/js/post-script.js' , array(), '1.0' , true);
+function single_post_scripts_load()
+{
+    if (is_single()) {
+        wp_enqueue_script('toc_script', get_template_directory_uri() . '/js/post-script.js', array(), '1.0', true);
     }
 }
-add_action('wp_enqueue_scripts' , 'single_post_scripts_load');
+add_action('wp_enqueue_scripts', 'single_post_scripts_load');
 //Load scripts in single.php
 
 //Tobar menu Use the navwalker
@@ -170,12 +172,13 @@ add_filter('fw:option_type:icon-v2:filter_packs', '_custom_packs_list');
 
 add_filter('the_time', 'change_date_format');
 
-function change_date_format(){
+function change_date_format()
+{
     //change date language here
     $date = get_the_time('Y/m/d');
     $date = explode('/', $date);
-    $farsi_date = g2p($date[0],$date[1],$date[2]);
-    return $farsi_date[0].'/'.$farsi_date[1].'/'.$farsi_date[2];
+    $farsi_date = g2p($date[0], $date[1], $date[2]);
+    return $farsi_date[0] . '/' . $farsi_date[1] . '/' . $farsi_date[2];
 }
 
 function g2p($g_y, $g_m, $g_d)
@@ -183,47 +186,48 @@ function g2p($g_y, $g_m, $g_d)
     $g_days_in_month = array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
     $j_days_in_month = array(31, 31, 31, 31, 31, 31, 30, 30, 30, 30, 30, 29);
 
-    $gy = $g_y-1600;
-    $gm = $g_m-1;
-    $gd = $g_d-1;
+    $gy = $g_y - 1600;
+    $gm = $g_m - 1;
+    $gd = $g_d - 1;
 
-    $g_day_no = 365*$gy+floor(($gy+3)/4)-floor(($gy+99)/100)+floor(($gy+399)/400);
+    $g_day_no = 365 * $gy + floor(($gy + 3) / 4) - floor(($gy + 99) / 100) + floor(($gy + 399) / 400);
 
-    for ($i=0; $i < $gm; ++$i){
+    for ($i = 0; $i < $gm; ++$i) {
         $g_day_no += $g_days_in_month[$i];
     }
 
-    if ($gm>1 && (($gy%4==0 && $gy%100!=0) || ($gy%400==0))){
+    if ($gm > 1 && (($gy % 4 == 0 && $gy % 100 != 0) || ($gy % 400 == 0))) {
         /* leap and after Feb */
         ++$g_day_no;
     }
 
     $g_day_no += $gd;
-    $j_day_no = $g_day_no-79;
-    $j_np = floor($j_day_no/12053);
+    $j_day_no = $g_day_no - 79;
+    $j_np = floor($j_day_no / 12053);
     $j_day_no %= 12053;
-    $jy = 979+33*$j_np+4*floor($j_day_no/1461);
+    $jy = 979 + 33 * $j_np + 4 * floor($j_day_no / 1461);
     $j_day_no %= 1461;
 
     if ($j_day_no >= 366) {
-        $jy += floor(($j_day_no-1)/365);
-        $j_day_no = ($j_day_no-1)%365;
+        $jy += floor(($j_day_no - 1) / 365);
+        $j_day_no = ($j_day_no - 1) % 365;
     }
-    $j_all_days = $j_day_no+1;
+    $j_all_days = $j_day_no + 1;
 
     for ($i = 0; $i < 11 && $j_day_no >= $j_days_in_month[$i]; ++$i) {
         $j_day_no -= $j_days_in_month[$i];
     }
 
-    $jm = $i+1;
-    $jd = $j_day_no+1;
+    $jm = $i + 1;
+    $jd = $j_day_no + 1;
 
     return array($jy, $jm, $jd, $j_all_days);
 }
 
 //show average comments ratings
 
-function display_average_rating($post_id) {
+function display_average_rating($post_id)
+{
     $comments = get_comments(array('post_id' => $post_id, 'status' => 'approve'));
     $total_rating = 0;
     $total_comments = 0;
@@ -252,7 +256,8 @@ function display_average_rating($post_id) {
 
 ///change replay title comments tag
 
-function custom_comment_form_defaults($defaults) {
+function custom_comment_form_defaults($defaults)
+{
     // تغییر تگ comment-reply-title به h4
     if (isset($defaults['title_reply_before']) && isset($defaults['title_reply_after'])) {
         $defaults['title_reply_before'] = '<p id="reply-title" class="comment-reply-title">';
@@ -275,3 +280,62 @@ add_action('comment_post', function ($comment_id) {
         error_log("Rating not saved for comment ID $comment_id. POST data: " . print_r($_POST, true));
     }
 });
+
+
+//related post middle of the content
+function add_related_posts_after_paragraph($content)
+{
+    if (is_single() && in_the_loop() && is_main_query()) {
+        // گرفتن دسته‌بندی‌های پست فعلی
+        $categories = get_the_category();
+        if (!empty($categories)) {
+            $category_ids = wp_list_pluck($categories, 'term_id'); // ID دسته‌ها
+
+            // تنظیمات کوئری برای گرفتن 3 مقاله مرتبط به صورت رندوم
+            $related_posts_query = new WP_Query([
+                'category__in' => $category_ids,
+                'post__not_in' => [get_the_ID()], // حذف پست جاری
+                'posts_per_page' => 2, // تعداد پست‌ها
+                'orderby' => 'rand', // به صورت رندوم
+            ]);
+
+            // اگر مقالات مرتبط پیدا شد
+            if ($related_posts_query->have_posts()) {
+                $related_posts_html = '    <div class="fieldset"><p class="related-post-title">مقالات مرتبط : </p><div class="related-posts"><div class="row">';
+                while ($related_posts_query->have_posts()) {
+                    $related_posts_query->the_post();
+
+                    // تولید HTML با استایل سفارشی
+                    $related_posts_html .= '
+                        <div class="col-lg-6">
+                            <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                                <img class="img-fluid" style="width: 110px; height: 100%; object-fit: cover;" src="' . get_the_post_thumbnail_url() . '" alt="' . get_the_title() . '">
+                                <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-right-0">
+                                    <div class="mb-2">
+                                        <a class="badge badge-primary font-weight-semi-bold p-1 ml-2" href="' . get_category_link(get_the_category()[0]->term_id) . '">' . get_the_category()[0]->name . '</a>
+                                        <span><small>' . display_jalali_date('Y/m/d', get_the_time('U')) . '</small></span>
+                                    </div>
+                                    <a class="h6 m-0 text-secondary font-weight-bold" href="' . get_permalink() . '">' . get_the_title() . '</a>
+                                </div>
+                            </div>
+                        </div>';
+                }
+                $related_posts_html .= '    </div></div></div>';
+                wp_reset_postdata(); // بازنشانی کوئری
+            }
+        }
+
+        // اضافه کردن مقالات مرتبط بعد از دومین پاراگراف
+        $paragraphs = explode('</p>', $content);
+        if (count($paragraphs) > 10 && isset($related_posts_html)) {
+            array_splice($paragraphs, 10 , 0, $related_posts_html); // اضافه کردن بعد از پاراگراف دوم
+        }
+
+        // ترکیب دوباره محتوا
+        $content = implode('</p>', $paragraphs);
+    }
+
+    return $content;
+}
+add_filter('the_content', 'add_related_posts_after_paragraph');
+//related post middle of the content

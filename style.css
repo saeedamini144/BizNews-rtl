@@ -10083,3 +10083,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
   border-color: white;
 }
 /*change bootstrap burger menu color */
+
+
+/* related post middle of the content */
+.fieldset {
+  border: 1px dashed #E4E7ED;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px 0 30px 0;
+}
+
+.related-post-title {
+  border: 1px solid #E4E7ED;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: -43px;
+  background-color: #ffff;
+}
+/* related post middle of the content */
