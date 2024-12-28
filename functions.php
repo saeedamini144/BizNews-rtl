@@ -339,3 +339,14 @@ function add_related_posts_after_paragraph($content)
 }
 add_filter('the_content', 'add_related_posts_after_paragraph');
 //related post middle of the content
+
+// تغییر تگ در pagination
+add_filter('navigation_markup_template', function ($template, $class) {
+    // تغییر h2 به p
+    $template = '
+        <nav class="navigation %1$s" role="navigation">
+            <p class="screen-reader-text">%2$s</p>
+            <div class="nav-links">%3$s</div>
+        </nav>';
+    return $template;
+}, 10, 2);

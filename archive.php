@@ -64,11 +64,20 @@ get_header();
                         <div class="section-title text-center">
 
                             <?php
+
+                            // get_the_posts_pagination(array(
+                            //     'screen_reader_text'=>__('<span>post pagination</span>','textdomain'),
+                            //     'mid_size'  => 2,
+                            //     'prev_text' => __('&#8594;', 'textdomain'),
+                            //     'next_text' => __('&#8592;', 'textdomain'),
+                            // ));
+
                             the_posts_pagination(array(
-                                'mid_size'  => 2,
-                                'prev_text' => __('&#8594;', 'textdomain'),
-                                'next_text' => __('&#8592;', 'textdomain'),
+                                'mid_size'           => 2,
+                                'prev_text'          => __('&#8594;', 'textdomain'),
+                                'next_text'          => __('&#8592;', 'textdomain'),
                             ));
+                            
                             ?>
 
                         </div>
