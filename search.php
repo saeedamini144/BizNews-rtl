@@ -45,24 +45,27 @@ get_header();
                 <!--  Sidebar  -->
 
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section-title text-center">
 
-                            <?php
-                            the_posts_pagination(array(
-                                'mid_size'  => 2,
-                                'prev_text' => __('&#8594;', 'textdomain'),
-                                'next_text' => __('&#8592;', 'textdomain'),
-                            ));
-                            ?>
-
+            <!-- pagination -->
+            <?php if ($wp_query->max_num_pages > 1) : ?>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-title text-center">
+                                <?php
+                                the_posts_pagination(array(
+                                    'mid_size'  => 2,
+                                    'prev_text' => __('&#8594;', 'textdomain'),
+                                    'next_text' => __('&#8592;', 'textdomain'),
+                                ));
+                                ?>
+                            </div>
                         </div>
-
                     </div>
                 </div>
-            </div>
+            <?php endif; ?>
+            <!-- pagination -->
+             
             <div>
                 <?php the_archive_description('<div class="taxonomy-description">', '</div>') ?>
             </div>
