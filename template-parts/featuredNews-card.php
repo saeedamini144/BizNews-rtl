@@ -26,7 +26,7 @@ if (!empty($Featured_News)) {
             <div class="position-relative overflow-hidden" style="height: 300px">
                 <img
                     class="img-fluid h-100"
-                    src="<?php echo the_post_thumbnail_url() ?>"
+                    src="<?php echo get_the_post_thumbnail_url() ?>"
                     style="object-fit: cover" alt="<?php the_title(); ?>" />
                 <div class="overlay">
                     <div class="mb-2">

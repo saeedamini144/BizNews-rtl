@@ -2,7 +2,7 @@
     <div class="position-relative mb-3">
         <img
             class="img-fluid w-100"
-            src="<?php echo the_post_thumbnail_url() ?>"
+            src="<?php echo get_the_post_thumbnail_url() ?>"
             style="object-fit: cover; height: 240px;" alt="<?php the_title(); ?>" />
         <div class="bg-white border border-top-0 p-4 card-height">
             <div class="mb-2">
