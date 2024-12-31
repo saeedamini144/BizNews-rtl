@@ -224,7 +224,7 @@ function g2p($g_y, $g_m, $g_d)
     return array($jy, $jm, $jd, $j_all_days);
 }
 
-//show average comments ratings
+//show average comments ratings with the schema rating code
 
 function display_average_rating($post_id)
 {
@@ -240,7 +240,7 @@ function display_average_rating($post_id)
         }
     }
 
-    $average_rating = $total_comments > 0 ? round($total_rating / $total_comments) : 0;
+    $average_rating = $total_comments > 0 ? round($total_rating / $total_comments, 1) : 0;
 
     // تولید HTML برای نمایش ستاره‌ها
     echo '<div class="average-rating">';
@@ -252,7 +252,29 @@ function display_average_rating($post_id)
         }
     }
     echo '</div>';
+
+    // اضافه کردن JSON-LD Schema
+    if ($total_comments > 0) {
+        $item_reviewed = array(
+            '@type' => 'WebPage', // تغییر نوع داده به WebPage یا Article
+            'name' => get_the_title($post_id),
+            'url' => get_permalink($post_id),
+        );
+
+        $schema = array(
+            '@context' => 'https://schema.org',
+            '@type' => 'AggregateRating',
+            'itemReviewed' => $item_reviewed,
+            'ratingValue' => $average_rating,
+            'reviewCount' => $total_comments,
+            'bestRating' => 5,
+            'worstRating' => 1,
+        );
+
+        echo '<script type="application/ld+json">' . json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . '</script>';
+    }
 }
+
 
 ///change replay title comments tag
 
