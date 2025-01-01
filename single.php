@@ -135,7 +135,7 @@ get_header();
                             <div id="table-of-contents" class=" mb-3 bg-light p-3 toc ">
 
                                 <details>
-                                    <summary>
+                                    <summary class="mb-2">
                                         جدول محتوایی
                                     </summary>
                                     <ul id="toc-list"></ul>
