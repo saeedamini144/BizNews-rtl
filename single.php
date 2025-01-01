@@ -132,9 +132,15 @@ get_header();
                                 ?>
                             </div>
                             <!-- Table of Contents -->
-                            <div id="table-of-contents" class="mb-4 p-3 bg-light border">
-                                <p>فهرست مطالب</p>
-                                <ul id="toc-list"></ul>
+                            <div id="table-of-contents" class=" mb-3 bg-light p-3 toc ">
+
+                                <details>
+                                    <summary>
+                                        جدول محتوایی
+                                    </summary>
+                                    <ul id="toc-list"></ul>
+                                </details>
+
                             </div>
                             <!-- Table of Contents -->
 
@@ -194,12 +200,12 @@ get_header();
                     <!-- Comments -->
                     <?php comments_template('/comments.php'); ?>
                     <!-- Comments -->
-                      <!-- Sidebar -->
-                <?php get_template_part('/template-parts/sidbar', 'main') ?>
-                <!-- Sidebar -->
+                    <!-- Sidebar -->
+                    <?php get_template_part('/template-parts/sidbar', 'main') ?>
+                    <!-- Sidebar -->
                 </div>
 
-               
+
 
             </div>
         </div>
