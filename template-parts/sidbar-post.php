@@ -1,90 +1,32 @@
 <?php
-
-
+$sidbar_post_add_title = fw_get_db_customizer_option('sidbar_post_add_title');
+$sidbar_post_banner_adds = fw_get_db_customizer_option('sidbar_post_banner_adds');
+$Banner_sidbar_post_link = fw_get_db_customizer_option('Banner_sidbar_post_link');
+$Banner_sidbar_post_alt = fw_get_db_customizer_option('Banner_sidbar_post_alt');
+$Banner_sidbar_post_rel = fw_get_db_customizer_option('Banner_sidbar_post_rel');
+$trending_sidbar_post = fw_get_db_customizer_option('trending_sidbar_post');
+$sidbar_post_show_category = fw_get_db_customizer_option('sidbar_post_show_category');
 ?>
 
 <aside class="col-lg-3">
     <div class="inner-sidbar">
-        <!-- Social Follow Start -->
-        <!-- <div class="mb-3">
-        <div class="section-title mb-0">
-            <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
-        </div>
-        <div class="bg-white border border-top-0 p-3">
-            <a
-                href=""
-                class="d-block w-100 text-white text-decoration-none mb-3"
-                style="background: #39569e">
-                <i
-                    class="fab fa-facebook-f text-center py-4 mr-3"
-                    style="width: 65px; background: rgba(0, 0, 0, 0.2)"></i>
-                <span class="font-weight-medium">12,345 Fans</span>
-            </a>
-            <a
-                href=""
-                class="d-block w-100 text-white text-decoration-none mb-3"
-                style="background: #52aaf4">
-                <i
-                    class="fab fa-twitter text-center py-4 mr-3"
-                    style="width: 65px; background: rgba(0, 0, 0, 0.2)"></i>
-                <span class="font-weight-medium">12,345 Followers</span>
-            </a>
-            <a
-                href=""
-                class="d-block w-100 text-white text-decoration-none mb-3"
-                style="background: #0185ae">
-                <i
-                    class="fab fa-linkedin-in text-center py-4 mr-3"
-                    style="width: 65px; background: rgba(0, 0, 0, 0.2)"></i>
-                <span class="font-weight-medium">12,345 Connects</span>
-            </a>
-            <a
-                href=""
-                class="d-block w-100 text-white text-decoration-none mb-3"
-                style="background: #c8359d">
-                <i
-                    class="fab fa-instagram text-center py-4 mr-3"
-                    style="width: 65px; background: rgba(0, 0, 0, 0.2)"></i>
-                <span class="font-weight-medium">12,345 Followers</span>
-            </a>
-            <a
-                href=""
-                class="d-block w-100 text-white text-decoration-none mb-3"
-                style="background: #dc472e">
-                <i
-                    class="fab fa-youtube text-center py-4 mr-3"
-                    style="width: 65px; background: rgba(0, 0, 0, 0.2)"></i>
-                <span class="font-weight-medium">12,345 Subscribers</span>
-            </a>
-            <a
-                href=""
-                class="d-block w-100 text-white text-decoration-none"
-                style="background: #055570">
-                <i
-                    class="fab fa-vimeo-v text-center py-4 mr-3"
-                    style="width: 65px; background: rgba(0, 0, 0, 0.2)"></i>
-                <span class="font-weight-medium">12,345 Followers</span>
-            </a>
-        </div>
-    </div> -->
-        <!-- Social Follow End -->
 
         <!-- Ads Start -->
         <div class="mb-3">
             <div class="section-title mb-0">
-                <span class="m-0 "><?php echo $add_title ?></span>
+                <span class="m-0 "><?php echo $sidbar_post_add_title ?></span>
             </div>
             <div class="bg-white text-center border border-top-0 p-3">
-                <a href="<?php echo $Banner_sidebar_link; ?>" rel="<?php echo $Banner_sidebar_rel ?>" target="_blank">
+                <a href="<?php echo $Banner_sidbar_post_link; ?>" rel="<?php echo $Banner_sidbar_post_rel ?>" target="_blank">
                     <img
                         class="img-fluid"
-                        src="<?php if (!empty($sidbar_banner_adds)) {
-                                    echo $sidbar_banner_adds['url'];
+                        src="<?php if (!empty($sidbar_post_banner_adds)) {
+                                    echo $sidbar_post_banner_adds['url'];
                                 } else {
                                     echo " ";
                                 }
                                 ?>"
-                        alt="<?php echo $Banner_sidebar_alt; ?>" />
+                        alt="<?php echo $Banner_sidbar_post_alt; ?>" />
                 </a>
             </div>
         </div>
@@ -93,12 +35,12 @@
         <!-- Popular News Start -->
         <div class="mb-3">
             <div class="section-title mb-0">
-                <span class="m-0 "><?php echo $trending_sidbar ?></span>
+                <span class="m-0 "><?php echo $trending_sidbar_post ?></span>
             </div>
             <div class="bg-white border border-top-0 p-3">
 
                 <!-- trending News  -->
-                <?php get_template_part('/template-parts/sidbar', 'singlePost') ?>
+                <?php related_post_sidebar(); ?>
                 <!-- trending News -->
 
             </div>
@@ -131,7 +73,7 @@
         <!-- category Start -->
         <div class="mb-3">
             <div class="section-title mb-0">
-                <span class="m-0"><?php echo $show_category ?></span>
+                <span class="m-0"><?php echo $sidbar_post_show_category ?></span>
             </div>
             <div class="bg-white border border-top-0 p-3">
                 <div class="d-flex flex-wrap m-n1">
