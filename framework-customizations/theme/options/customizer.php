@@ -588,4 +588,83 @@ $options = array(
 
         ),
     ),
+
+    'sidebar_post_Settings' => array(
+        'title' => __(' تنظیمات سایدبار پست ها', '{domain}'),
+        'options' => array(
+
+            'sidbar_post_add_title' => array(
+                'label' => __('عنوان مورد نظر خود را وارد کنید', '{domain}'),
+                'type' => 'text',
+                'desc' => __('می توانید عنوان بخش را تغییر دهید', '{domain}')
+            ),
+
+            'sidbar_post_banner_adds' => array(
+
+                'label' => __('آپلود بنر تبلیغاتی', '{domain}'),
+                'desc' => __('بنر تبلیغاتی سایدبار', '{domain}'),
+                'help' => __('اندزه بنر می بایست 410 در 250 پیکسل باشد'),
+                'type' => 'upload',
+                'images_only' => true,
+
+            ),
+
+            'Banner_sidbar_post_link' => array(
+
+                'label' => __('لینک بنر ', '{domain}'),
+                'type' => 'text',
+                'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
+
+            ),
+
+            'Banner_sidbar_post_alt' => array(
+
+                'label' => __('alt بنر تبلیغاتی', '{domain}'),
+                'type' => 'text',
+                'desc' => __('قرار دادن alt', '{domain}'),
+                'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
+
+            ),
+
+            'Banner_sidbar_post_rel' => array(
+
+                'label' => __('فالو یا نو فالو', '{domain}'),
+                'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
+                'type'  => 'select',
+                'value' => ' ',
+                'choices' => array(
+                    'follow' => __('follow', '{domain}'),
+                    'nofollow' => __('nofollow', '{domain}')
+                ),
+                /**
+                 * Allow save not existing choices
+                 * Useful when you use the select to populate it dynamically from js
+                 */
+                'no-validate' => false,
+
+            ),
+
+            'trending_sidbar_post' => array(
+                'label' => __(' عنوان بخش مطالب در سایدبار', '{domain}'),
+                'type' => 'text',
+                'desc' => __('تغییر عنوان بخش مطالب در ساید بار', '{domain}'),
+            ),
+
+            // 'trending_news_category_sidbar_post' => array(
+            //     'label' => __('انتخاب دسته بندی مطالب', '{doamin}'),
+            //     'type' => 'multi-select',
+            //     'desc' => __('دسته بندی مورد نظر جهت نمایش در بخش سایدبار را انتخاب کنید', '{domain}'),
+            //     'population' => 'taxonomy',
+            //     'source' => 'category',
+            //     'limit' => 100,
+            // ),
+
+            'sidbar_post_show_category' => array(
+                'label' => __('عنوان بخش نمایش همه عناوین دسته بندی', '{domain}'),
+                'type' => 'text',
+                'desc' => __('تغییر عنوان بخش نمایش تمامی دسته بندی ها', '{domain}'),
+            ),
+
+        ),
+    ),
 );
