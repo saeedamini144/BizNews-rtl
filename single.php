@@ -155,6 +155,50 @@ get_header();
                                     <?php endwhile; ?>
                                 <?php endif; ?>
 
+                                <!-- share button -->
+                                <div class="mb-4 mt-4 d-flex justify-content-between align-items-center">
+                                    <div class="share-button-title">
+                                        <strong>اشتراک گذاری:</strong>
+                                    </div>
+
+                                    <div class="share-button">
+                                        <?php
+                                        // لینک و عنوان صفحه فعلی
+                                        $current_url = urlencode(get_permalink());
+                                        $current_title = urlencode(get_the_title());
+                                        ?>
+
+                                        <a class="border-0 btn btn-secondary rounded-circle btn-square ml-1 mb-1" href="https://t.me/share/url?url=<?= $current_url; ?>" target="_blank" aria-label="Telegram" style="background-color: #0088cc;">
+                                            <i class="fab fa-telegram"></i>
+                                        </a>
+
+                                        <a class="border-0 btn btn-secondary rounded-circle btn-square ml-1 mb-1" href="https://wa.me/?text=<?= $current_url; ?>" target="_blank" aria-label="WhatsApp" style="background-color: #25d366;">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+
+                                        <a class="border-0 btn btn-secondary rounded-circle btn-square ml-1 mb-1" href="https://www.linkedin.com/shareArticle?url=<?= $current_url; ?>&title=<?= $current_title; ?>" target="_blank" aria-label="LinkedIn" style="background-color: #0077b5;">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+
+                                        <a class="border-0 btn btn-secondary rounded-circle btn-square ml-1 mb-1" href="https://twitter.com/intent/tweet?text=<?= $current_title; ?>&url=<?= $current_url; ?>" target="_blank" aria-label="Twitter" style="background-color: #1da1f2;">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+
+                                        <a class="border-0 btn btn-secondary rounded-circle btn-square ml-1 mb-1" href="https://www.facebook.com/sharer/sharer.php?u=<?= $current_url; ?>" target="_blank" aria-label="Facebook" style="background-color: #1877f2;">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+
+                                        <a class="border-0 btn btn-secondary rounded-circle btn-square ml-1 mb-1" href="https://pinterest.com/pin/create/button/?url=<?= $current_url; ?>" target="_blank" aria-label="Pinterest" style="background-color: #e60023;">
+                                            <i class="fab fa-pinterest"></i>
+                                        </a>
+
+                                        <a class="border-0 btn btn-secondary rounded-circle btn-square ml-1 mb-1" href="mailto:?subject=<?= $current_title; ?>&body=<?= $current_url; ?>" target="_blank" aria-label="Email" style="background-color: #ff5722;">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- share button -->
+                                 
                                 <!-- post change -->
                                 <div class="post-btn">
                                     <!-- Previous Post -->
@@ -197,15 +241,14 @@ get_header();
                             <p><?php the_author_meta('description') ?></p>
                         </div>
                     </div>
+
                     <!-- Comments -->
                     <?php comments_template('/comments.php'); ?>
                     <!-- Comments -->
                     <!-- Sidebar -->
-                    <?php get_template_part('/template-parts/sidbar', 'main') ?>
+                    <?php get_template_part('/template-parts/sidbar', 'post') ?>
                     <!-- Sidebar -->
                 </div>
-
-
 
             </div>
         </div>

@@ -166,7 +166,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   }
   
   a {
-    color: #FFCC00;
+    color: #5887ff;
     text-decoration: none;
     background-color: transparent;
   }
@@ -185,7 +185,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
     color: inherit;
     text-decoration: none;
   }
-  
+  /* .post-content a{
+    color: #5887ff;
+    text-decoration: none;
+    background-color: transparent;
+  }
+   */
   pre,
   code,
   kbd,
@@ -10109,4 +10114,21 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 #table-of-contents{
   border-radius: 10px;
+}
+/* share button style */
+.btn-square {
+  width: 30px; /* عرض دکمه */
+  height: 30px; /* ارتفاع دکمه */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* حذف فاصله اضافی */
+  font-size: 18px; /* اندازه آیکن */
+}
+.btn-square i {
+  line-height: 1; /* تنظیم خط آیکن */
+}
+.share-button {
+  display: flex;
+  gap: 5px; /* فاصله بین دکمه‌ها */
 }
