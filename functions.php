@@ -350,7 +350,7 @@ function add_related_posts_after_paragraph($content)
         // اضافه کردن مقالات مرتبط بعد از دومین پاراگراف
         $paragraphs = explode('</p>', $content);
         if (count($paragraphs) > 10 && isset($related_posts_html)) {
-            array_splice($paragraphs, 10 , 0, $related_posts_html); // اضافه کردن بعد از پاراگراف دوم
+            array_splice($paragraphs, 10, 0, $related_posts_html); // اضافه کردن بعد از پاراگراف دوم
         }
 
         // ترکیب دوباره محتوا
@@ -372,3 +372,34 @@ add_filter('navigation_markup_template', function ($template, $class) {
         </nav>';
     return $template;
 }, 10, 2);
+
+
+//related post of the sidebar post
+function related_post_sidebar()
+{
+    $categories = wp_get_post_categories(get_the_ID());
+    $related_posts_query = new WP_Query(array(
+        'category__in' => $categories,
+        'post__not_in' => array(get_the_ID()),
+        'posts_per_page' => 6,
+        'orderby' => 'date',
+    ));
+    if (!empty($related_posts_query->posts)) {
+        while ($related_posts_query->have_posts()) {
+            $related_posts_query->the_post();
+?>
+                <div class="d-flex align-items-center bg-white mb-3" style="height: 110px; ">
+                    <img class="img-fluid" style="width: 110px; height: 100%; object-fit: cover;" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-right-0">
+                        <div class="mb-2">
+                            <a class="badge badge-primary font-weight-semi-bold p-1 ml-2" href="<?php echo get_category_link(get_the_category()[0]->term_id); ?>"><?php echo get_the_category()[0]->name; ?></a>
+                            <span><small><?php echo display_jalali_date('Y/m/d', get_the_time('U')); ?></small></span>
+                        </div>
+                        <a class="h6 m-0 text-secondary font-weight-bold" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    </div>
+                </div>
+<?php
+        }wp_reset_postdata();
+    }
+}
+add_action(' ','related_post_sidebar');
