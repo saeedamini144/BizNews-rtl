@@ -17,7 +17,7 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
 
 ?>
 <!-- Main News Slider Start -->
-<div class="container-fluid">
+<main class="container-fluid">
     <div class="row">
         <div class="col-lg-7 px-0">
             <div class="owl-carousel main-carousel position-relative">
@@ -158,7 +158,7 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
             </div>
         </div>
     </div>
-</div>
+</main>
 </body>
 <?php
 get_footer();
