@@ -88,7 +88,7 @@
                         $logo = wp_get_attachment_image_url($custom_logo_id);
                         if (has_custom_logo()) {
                         ?>
-                            <a href="<?php echo home_url(); ?>" aria-label="Logo"><img src="<?php echo esc_url($logo) ?>" alt="<?php get_bloginfo('name') ?>"></a>
+                            <a href="<?php echo home_url(); ?>" aria-label="Logo"><img width="150px" height="54px" src="<?php echo esc_url($logo) ?>" alt="<?php get_bloginfo('name') ?>"></a>
                         <?php
                         } else {
                             echo get_bloginfo('name');
@@ -99,7 +99,7 @@
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
                     <a rel="<?php echo $Banner_header_rel ?>" href="<?php echo $Banner_header_link; ?>" target="_blank" >
-                        <img class="img-fluid" src="<?php
+                        <img width="100%" height="100%"  class="img-fluid" src="<?php
                                                     if (!empty($Banner_header)) {
                                                         echo $Banner_header["url"];
                                                         // var_dump($Banner_header);
@@ -122,7 +122,7 @@
                 <?php
                 if (!empty($Mobile_logo)) {
                 ?>
-                    <a href="<?php echo home_url();  ?>" aria-label="Logo"><img src="<?php echo $Mobile_logo["url"] ?>" alt="<?php get_bloginfo('name') ?>"></a>
+                    <a href="<?php echo home_url();  ?>" aria-label="Logo"><img width="150px" height="54px" src="<?php echo $Mobile_logo["url"] ?>" alt="<?php get_bloginfo('name') ?>"></a>
                 <?php
                 } else {
                     echo '';

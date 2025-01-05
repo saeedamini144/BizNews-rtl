@@ -19,7 +19,7 @@ $Banner_sidebar_rel = fw_get_db_customizer_option('Banner_sidebar_rel');
             </div>
             <div class="bg-white text-center border border-top-0 p-3">
                 <a href="<?php echo $Banner_sidebar_link; ?>" rel="<?php echo $Banner_sidebar_rel ?>" target="_blank">
-                    <img
+                    <img width="100%" height="100%"
                         class="img-fluid"
                         src="<?php if (!empty($sidbar_banner_adds)) {
                                     echo $sidbar_banner_adds['url'];

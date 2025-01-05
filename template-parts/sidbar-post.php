@@ -18,7 +18,7 @@ $sidbar_post_show_category = fw_get_db_customizer_option('sidbar_post_show_categ
             </div>
             <div class="bg-white text-center border border-top-0 p-3">
                 <a href="<?php echo $Banner_sidbar_post_link; ?>" rel="<?php echo $Banner_sidbar_post_rel ?>" target="_blank">
-                    <img
+                    <img width="100%" height="100%"
                         class="img-fluid"
                         src="<?php if (!empty($sidbar_post_banner_adds)) {
                                     echo $sidbar_post_banner_adds['url'];
