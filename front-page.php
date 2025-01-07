@@ -106,12 +106,11 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
                         <!-- Banner_main_ads_one -->
                         <div class="col-lg-12 mb-3">
                             <a rel="<?php echo $Banner_ads_one_rel ?>" href="<?php echo $Banner_ads_one_link; ?>" target="_blank">
-                                <img width="100%" height="100%" alt="<?php echo $Banner_ads_one_alt?>" class="img-fluid w-100" src="<?php if (!empty($Banner_main_ads_one)) {
-                                                                        echo $Banner_main_ads_one['url'];
-                                                                    } else
-                                                                        echo '';
-                                                                    ?>"
-                                 />
+                                <img width="100%" height="100%" alt="<?php echo $Banner_ads_one_alt ?>" class="img-fluid w-100" src="<?php if (!empty($Banner_main_ads_one)) {
+                                                                                                                                        echo $Banner_main_ads_one['url'];
+                                                                                                                                    } else
+                                                                                                                                        echo '';
+                                                                                                                                    ?>" />
                             </a>
                         </div>
                         <!-- Banner_main_ads_one -->
@@ -129,12 +128,11 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
                         <div class="col-lg-12 mb-3">
                             <a href="<?php echo $Banner_ads_two_link; ?>" rel="<?php echo $Banner_ads_two_rel; ?>" target="_blank">
                                 <img width="100%" height="100%" class="img-fluid w-100" src="<?php if (!empty($Banner_main_ads_two)) {
-                                                                        echo $Banner_main_ads_two['url'];
-                                                                    } else {
-                                                                        echo 'No banner ads';
-                                                                    }
-                                                                    ?>" alt="<?php echo $Banner_ads_two_alt ?>" 
-                                />
+                                                                                                    echo $Banner_main_ads_two['url'];
+                                                                                                } else {
+                                                                                                    echo 'No banner ads';
+                                                                                                }
+                                                                                                ?>" alt="<?php echo $Banner_ads_two_alt ?>" />
                             </a>
                         </div>
                         <!-- Banner_main_ads_two -->
@@ -158,6 +156,8 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
             </div>
         </div>
     </div>
+    <!-- News With Sidebar End -->
+
 </main>
 </body>
 <?php
