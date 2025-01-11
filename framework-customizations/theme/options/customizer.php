@@ -153,40 +153,42 @@ $options = array(
             ),
 
             'Featured_News_Section' => array(
-                'title' => __('اخبار ویژه', '{domain}'),
+                'title' => __('بخش دوم صفحه اصلی', '{domain}'),
                 'options' => array(
+
+                    'Featured_News_title' => array(
+                        'label' => __('عنوان بخش دوم را وارد کنید', '{domain}'),
+                        'type' => 'text',
+                        'desc' => __('عنوان مربوط به بخش دوم', '{domain}'),
+                    ),
 
                     'Featured_News' => array(
                         'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
                         'type' => 'multi-select',
-                        'desc' => __('دسته بندی مورد نظر خود برای نمایش در بخش ویژه انتخاب کنید', '{domain}'),
+                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش دوم را وارد کنید', '{domain}'),
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 100,
                     ),
 
-                    'Featured_News_title' => array(
-                        'label' => __('عنوان مورد نظر خود را وارد کنید', '{domain}'),
-                        'type' => 'text',
-                        'desc' => __('می توانید عنوان بخش را تغییر دهید', '{domain}'),
-                    ),
+                    
                 ),
             ),
 
             'Latest_News_Section' => array(
-                'title' => __(' بخش سوم جدید ترین اخبار صفحه اصلی', '{domain}'),
+                'title' => __(' بخش سوم صفحه اصلی', '{domain}'),
                 'options' => array(
 
                     'Latest_News_title' => array(
-                        'label' => __('عنوان مورد نظر خود را وارد کنید', '{domain}'),
+                        'label' => __('عنوان بخش سوم را وارد کنید', '{domain}'),
                         'type' => 'text',
-                        'desc' => __('می توانید عنوان بخش را تغییر دهید', '{domain}'),
+                        'desc' => __('عنوان مربوط به بخش سوم', '{domain}'),
                     ),
 
                     'Latest_News' => array(
-                        'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
+                        'label' => __('دسته بندی خود را وارد کنید', '{domain}'),
                         'type' => 'multi-select',
-                        'desc' => __('دسته بندی مورد نظر خود برای نمایش در بخش جدیدترین اخبار انتخاب کنید', '{domain}'),
+                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش سوم را وارد کنید', '{domain}'),
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 100,
@@ -206,20 +208,20 @@ $options = array(
                         'label' => __('لینک بنر ', '{domain}'),
                         'type' => 'text',
                         'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
-        
+
                     ),
-        
+
                     'Banner_ads_one_alt' => array(
-        
+
                         'label' => __('alt بنر تبلیغاتی', '{domain}'),
                         'type' => 'text',
                         'desc' => __('قرار دادن alt', '{domain}'),
                         'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
-        
+
                     ),
-        
+
                     'Banner_ads_one_rel' => array(
-        
+
                         'label' => __('فالو یا نو فالو', '{domain}'),
                         'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
                         'type'  => 'select',
@@ -233,25 +235,25 @@ $options = array(
                          * Useful when you use the select to populate it dynamically from js
                          */
                         'no-validate' => false,
-        
+
                     ),
                 ),
             ),
 
             'Middle_section' => array(
-                'title' => __('ویرایش بخش میانی صفحه اصلی', '{domain}'),
+                'title' => __('بخش چهارم صفحه اصلی', '{domain}'),
                 'options' => array(
 
                     'middle_content_title' => array(
 
-                        'label' => __('عنوان مورد نظر خود را وارد کنید', '{domain}'),
-                        'desc' => __('می توانید عنوان بخش را تغییر دهید', '{domain}'),
+                        'label' => __('عنوان بخش چهارم را وارد کنید', '{domain}'),
+                        'desc' => __('عنوان مربوط به بخش چهارم', '{domain}'),
                         'type' => 'text',
                     ),
 
                     'middle_content' => array(
                         'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domian}'),
-                        'desc' => __('دسته بندی مورد نظر خود برای نمایش در بخش میانی انتخاب کنید', '{domain}'),
+                        'desc' => __('دسته بندی مورد نظر خود برای نمایش در چهارم را وارد کنید', '{domain}'),
                         'type' => 'multi-select',
                         'population' => 'taxonomy',
                         'source' => 'category',
@@ -267,26 +269,26 @@ $options = array(
                         'images_only' => true,
                     ),
 
-                    
+
                     'Banner_ads_two_link' => array(
 
                         'label' => __('لینک بنر ', '{domain}'),
                         'type' => 'text',
                         'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
-        
+
                     ),
-        
+
                     'Banner_ads_two_alt' => array(
-        
+
                         'label' => __('alt بنر تبلیغاتی', '{domain}'),
                         'type' => 'text',
                         'desc' => __('قرار دادن alt', '{domain}'),
                         'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
-        
+
                     ),
-        
+
                     'Banner_ads_two_rel' => array(
-        
+
                         'label' => __('فالو یا نو فالو', '{domain}'),
                         'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
                         'type'  => 'select',
@@ -300,31 +302,99 @@ $options = array(
                          * Useful when you use the select to populate it dynamically from js
                          */
                         'no-validate' => false,
-        
+
                     ),
 
                 ),
             ),
 
             'Last_section' => array(
-                'title' => __('بخش آخر صفحه اصلی', '{domain}'),
+                'title' => __('بخش پنجم صفحه اصلی', '{domain}'),
                 'options' => array(
 
                     'Last_content_title' => array(
 
-                        'label' => __('عنوان مورد نظر خود را وارد کنید', '{domain}'),
-                        'desc' => __('می توانید عنوان بخش را تغییر دهید', '{domain}'),
+                        'label' => __('عنوان بخش پنجم را وارد کنید', '{domain}'),
+                        'desc' => __('عنوان مربوط به بخش پنجم', '{domain}'),
                         'type' => 'text',
                     ),
 
                     'Last_content' => array(
                         'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
-                        'desc' => __('دسته بندی مورد نظر خود برای نمایش در بخش انتهایی انتخاب کنید', '{domain}'),
+                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش پنجم را وارد کنید', '{domain}'),
                         'type' => 'multi-select',
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 100,
                     ),
+                ),
+            ),
+
+            'Sixth_section' => array(
+                'title' => __('بخش ششم صفحه اصلی', '{domain}'),
+                'options' => array(
+
+                    'Sixth_section_title' => array(
+                        'label' => __('عنوان بخش ششم را وارد کنید', '{domain}'),
+                        'desc' => __('عنوان مربوط به بخش ششم', '{domain}'),
+                        'type' => 'text',
+                    ),
+
+                    'Sixth_section_cat' => array(
+                        'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
+                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش ششم را وارد کنید', '{domain}'),
+                        'type' => 'multi-select',
+                        'population' => 'taxonomy',
+                        'source' => 'category',
+                        'limit' => 100,
+                    ),
+
+                ),
+
+                'Seventh_section' => array(
+                    'title' => __('بخش هفتم صفحه اصلی', '{domain}'),
+                    'options' => array(
+
+                        'Seventh_section_title' => array(
+                            'label' => __('عنوان بخش هفتم را وارد کنید', '{domain}'),
+                            'desc' => __('عنوان مربوط به بخش هفتم', '{domain}'),
+                            'type' => 'text',
+                        ),
+
+                        'Seventh_section_cat' => array(
+
+                            'label' => __('دسته بندی مورد نظر خود را انتخاب کنید ', '{domain}'),
+                            'desc' => __('دسته بندی مورد نظر برای نمایش در بخش هفتم را وارد کنید', '{domain}'),
+                            'type' => 'multi-select',
+                            'population' => 'taxonomy',
+                            'source' => 'category',
+                            'limit' => 100,
+                        ),
+                    ),
+                ),
+
+                'Eighth_section'=> array(
+                    'title'=> __('بخش هشتم صفحه اصلی', '{domain}'),
+                    'options'=> array(
+
+                        'Eighth_section_title'=> array(
+                            'label'=> __('عنوان بخش هشتم را وارد کنید', '{domain}'),   
+                            'desc'=> __('عنوان مربوط به بخش هشتم', 'domain'),
+                            'type'=> 'text',
+                        ),
+
+                        'Eighth_section_cat'=> array(
+                            'label'=> __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
+                            'desc'=>__('دسته بندی مورد نظر برای نمایش در بخش هشتم را وارد کنید ','{domain}'),
+                            'type'=> 'multi-select',
+                            'population'=> 'taxonomy',
+                            'source'=>'category',
+                            'limit'=> 100,
+                        ),
+
+                    ),
+
+
                 ),
             ),
         ),
