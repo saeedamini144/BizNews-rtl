@@ -14,6 +14,9 @@ $Banner_ads_two_alt = fw_get_db_customizer_option('Banner_ads_two_alt');
 $Banner_ads_two_rel = fw_get_db_customizer_option('Banner_ads_two_rel');
 $Last_content_title = fw_get_db_customizer_option('Last_content_title');
 $middle_content_title = fw_get_db_customizer_option('middle_content_title');
+$Sixth_section_title = fw_get_db_customizer_option('Sixth_section_title');
+$Seventh_section_title = fw_get_db_customizer_option('Seventh_section_title');
+$Eighth_section_title = fw_get_db_customizer_option('Eighth_section_title');
 
 ?>
 <!-- Main News Slider Start -->
@@ -85,7 +88,7 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
     </div>
     <!-- Featured News Slider End -->
 
-    <!-- News With Sidebar Start -->
+    <!--  main Content and sidebar -->
     <div class="container-fluid">
         <div class="container">
             <div class="row">
@@ -107,10 +110,10 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
                         <div class="col-lg-12 mb-3">
                             <a rel="<?php echo $Banner_ads_one_rel ?>" href="<?php echo $Banner_ads_one_link; ?>" target="_blank">
                                 <img width="100%" height="100%" alt="<?php echo $Banner_ads_one_alt ?>" class="img-fluid w-100" src="<?php if (!empty($Banner_main_ads_one)) {
-                                                                                                                                        echo $Banner_main_ads_one['url'];
-                                                                                                                                    } else
-                                                                                                                                        echo '';
-                                                                                                                                    ?>" />
+                                                                                                                                            echo $Banner_main_ads_one['url'];
+                                                                                                                                        } else
+                                                                                                                                            echo '';
+                                                                                                                                        ?>" />
                             </a>
                         </div>
                         <!-- Banner_main_ads_one -->
@@ -146,6 +149,24 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
                         <?php get_template_part('/template-parts/hTwoDesign', 'card'); ?>
                         <!-- Last section content -->
 
+                        <!-- Sixth Section -->
+                        <div class="container-fluid">
+                            <div class="section-title">
+                                <h4 class="m-0 text-uppercase font-weight-bold"><?php echo $Sixth_section_title ?></h4>
+                            </div>
+                        </div>
+                        <?php get_template_part('/template-parts/Section', 'sixth') ?>
+                        <!-- Sixth Section -->
+
+                          <!-- Seventh Section -->
+                          <div class="container-fluid">
+                            <div class="section-title">
+                                <h4 class="m-0 text-uppercase font-weight-bold"><?php echo $Seventh_section_title ?></h4>
+                            </div>
+                        </div>
+                        <?php get_template_part('/template-parts/Section', 'seventh') ?>
+                        <!-- Seventh Section -->
+
                     </div>
                 </div>
 
@@ -156,7 +177,24 @@ $middle_content_title = fw_get_db_customizer_option('middle_content_title');
             </div>
         </div>
     </div>
-    <!-- News With Sidebar End -->
+    <!-- main Content and sidebar -->
+
+    <!-- 8 section -->
+    <div class="container-fluid pt-5 mb-3">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="m-0 text-uppercase font-weight-bold"><?php echo $Eighth_section_title ?></h4>
+            </div>
+            <div
+                class="owl-carousel news-carousel carousel-item-4 position-relative">
+
+                <!-- Featured News Content -->
+                <?php get_template_part('/template-parts/Section', 'eight'); ?>
+                <!-- Featured News Content -->
+            </div>
+        </div>
+    </div>
+    <!-- 8 section -->
 
 </main>
 </body>

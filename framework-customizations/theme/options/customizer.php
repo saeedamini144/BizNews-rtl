@@ -171,7 +171,7 @@ $options = array(
                         'limit' => 100,
                     ),
 
-                    
+
                 ),
             ),
 
@@ -350,53 +350,54 @@ $options = array(
                     ),
 
                 ),
+            ),
+            'Seventh_section' => array(
+                'title' => __('بخش هفتم صفحه اصلی', '{domain}'),
+                'options' => array(
 
-                'Seventh_section' => array(
-                    'title' => __('بخش هفتم صفحه اصلی', '{domain}'),
-                    'options' => array(
-
-                        'Seventh_section_title' => array(
-                            'label' => __('عنوان بخش هفتم را وارد کنید', '{domain}'),
-                            'desc' => __('عنوان مربوط به بخش هفتم', '{domain}'),
-                            'type' => 'text',
-                        ),
-
-                        'Seventh_section_cat' => array(
-
-                            'label' => __('دسته بندی مورد نظر خود را انتخاب کنید ', '{domain}'),
-                            'desc' => __('دسته بندی مورد نظر برای نمایش در بخش هفتم را وارد کنید', '{domain}'),
-                            'type' => 'multi-select',
-                            'population' => 'taxonomy',
-                            'source' => 'category',
-                            'limit' => 100,
-                        ),
-                    ),
-                ),
-
-                'Eighth_section'=> array(
-                    'title'=> __('بخش هشتم صفحه اصلی', '{domain}'),
-                    'options'=> array(
-
-                        'Eighth_section_title'=> array(
-                            'label'=> __('عنوان بخش هشتم را وارد کنید', '{domain}'),   
-                            'desc'=> __('عنوان مربوط به بخش هشتم', 'domain'),
-                            'type'=> 'text',
-                        ),
-
-                        'Eighth_section_cat'=> array(
-                            'label'=> __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
-                            'desc'=>__('دسته بندی مورد نظر برای نمایش در بخش هشتم را وارد کنید ','{domain}'),
-                            'type'=> 'multi-select',
-                            'population'=> 'taxonomy',
-                            'source'=>'category',
-                            'limit'=> 100,
-                        ),
-
+                    'Seventh_section_title' => array(
+                        'label' => __('عنوان بخش هفتم را وارد کنید', '{domain}'),
+                        'desc' => __('عنوان مربوط به بخش هفتم', '{domain}'),
+                        'type' => 'text',
                     ),
 
+                    'Seventh_section_cat' => array(
 
+                        'label' => __('دسته بندی مورد نظر خود را انتخاب کنید ', '{domain}'),
+                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش هفتم را وارد کنید', '{domain}'),
+                        'type' => 'multi-select',
+                        'population' => 'taxonomy',
+                        'source' => 'category',
+                        'limit' => 100,
+                    ),
                 ),
             ),
+
+            'Eighth_section' => array(
+                'title' => __('بخش هشتم صفحه اصلی', '{domain}'),
+                'options' => array(
+
+                    'Eighth_section_title' => array(
+                        'label' => __('عنوان بخش هشتم را وارد کنید', '{domain}'),
+                        'desc' => __('عنوان مربوط به بخش هشتم', 'domain'),
+                        'type' => 'text',
+                    ),
+
+                    'Eighth_section_cat' => array(
+                        'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
+                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش هشتم را وارد کنید ', '{domain}'),
+                        'type' => 'multi-select',
+                        'population' => 'taxonomy',
+                        'source' => 'category',
+                        'limit' => 100,
+                    ),
+
+                ),
+
+
+            ),
+
+
         ),
     ),
 
