@@ -139,7 +139,7 @@
 
 
  <!-- Back to Top -->
- <a href="#" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+ <a href="#" aria-label="Back to top" class="btn btn-primary btn-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
  <?php
     wp_footer();
