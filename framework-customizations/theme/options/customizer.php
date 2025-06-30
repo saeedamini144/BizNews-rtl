@@ -4,48 +4,48 @@ use function PHPSTORM_META\type;
 
 $options = array(
     'Header_Settings' => array(
-        'title' => __('تنظیمات هدر', '{domain}'),
+        'title' => esc_html__('تنظیمات هدر', 'BizNews'),
         'options' => array(
 
             'Banner_Header' => array(
-                'title' => __('بنر تبلیغاتی هدر', '{domain}'),
+                'title' => esc_html__('بنر تبلیغاتی هدر', 'BizNews'),
                 'options' => array(
 
                     'Banner_header' => array(
-                        'label' => __('بنر مورد نظر را آپلود کنید', '{domain}'),
+                        'label' => esc_html__('بنر مورد نظر را آپلود کنید', 'BizNews'),
                         'type' => 'upload',
                         // 'attr'  => array('class' => 'img-fluid'),
-                        'desc' => __('بنر تبلیغاتی هدر', '{domain}'),
-                        'help' => __('اندازه بنر می بایست 728 در 90 پیکسل باشد', '{domain}'),
+                        'desc' => esc_html__('بنر تبلیغاتی هدر', 'BizNews'),
+                        'help' => esc_html__('اندازه بنر می بایست 728 در 90 پیکسل باشد', 'BizNews'),
                         'images_only' => true,
                     ),
 
                     'Banner_header_link' => array(
 
-                        'label' => __('لینک بنر هدر', '{domain}'),
+                        'label' => esc_html__('لینک بنر هدر', 'BizNews'),
                         'type' => 'text',
-                        'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
+                        'help' => esc_html__('لینک کامل بنر را وارد کنید', 'BizNews'),
 
                     ),
 
                     'Banner_header_alt' => array(
 
-                        'label' => __('alt بنر تبلیغاتی', '{domain}'),
+                        'label' => esc_html__('alt بنر تبلیغاتی', 'BizNews'),
                         'type' => 'text',
-                        'desc' => __('قرار دادن alt', '{domain}'),
-                        'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
+                        'desc' => esc_html__('قرار دادن alt', 'BizNews'),
+                        'help' => esc_html__('متن جهت قرار دادن در alt تصاویر را وارد کنید', 'BizNews'),
 
                     ),
 
                     'Banner_header_rel' => array(
 
-                        'label' => __('فالو یا نو فالو', '{domain}'),
-                        'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
+                        'label' => esc_html__('فالو یا نو فالو', 'BizNews'),
+                        'desc' => esc_html__('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', 'BizNews'),
                         'type'  => 'select',
                         'value' => ' ',
                         'choices' => array(
-                            'follow' => __('follow', '{domain}'),
-                            'nofollow' => __('nofollow', '{domain}')
+                            'follow' => esc_html__('follow', 'BizNews'),
+                            'nofollow' => esc_html__('nofollow', 'BizNews')
                         ),
                         /**
                          * Allow save not existing choices
@@ -57,48 +57,48 @@ $options = array(
 
                     'Mobile_logo' => array(
 
-                        'label' => __('آپلود لوگو موبایل', '{domain}'),
+                        'label' => esc_html__('آپلود لوگو موبایل', 'BizNews'),
                         'type' => 'upload',
                         'images_only' => true,
-                        'help' => __('به دلیل نمایش هدر مشکی در موبایل لوگو سایت در حالت موبایل را روشن انتخاب کنید', 'domain'),
+                        'help' => esc_html__('به دلیل نمایش هدر مشکی در موبایل لوگو سایت در حالت موبایل را روشن انتخاب کنید', 'domain'),
                     ),
 
                 ),
             ),
 
             'Social_Icon' => array(
-                'title' => __("آیکن شبکه های اجتماعی", '{domain}'),
+                'title' => esc_html__("آیکن شبکه های اجتماعی", 'BizNews'),
                 'options' => array(
 
                     'Social_icon' => array(
-                        'label' => __('شبکه های اجتماعی', 'domain'),
+                        'label' => esc_html__('شبکه های اجتماعی', 'domain'),
                         'type' => 'addable-box',
-                        'desc' => __('آیکن های شبکه های اجتماعی را از این بخش می توانید با وارد کردن نامشان از فونت آسم قرار دهید', '{domain}'),
+                        'desc' => esc_html__('آیکن های شبکه های اجتماعی را از این بخش می توانید با وارد کردن نامشان از فونت آسم قرار دهید', 'BizNews'),
                         'value' => '',
                         'box-options' => array(
                             'icon_Name' => array(
 
-                                'label' => __('انتخاب آیکن', '{domain}'),
+                                'label' => esc_html__('انتخاب آیکن', 'BizNews'),
                                 'type' => 'text',
                                 // 'preview_size' => 'small',
                                 // 'model_size' => 'small',
-                                'desc' => __('از نام آیکن های فونت آسم استفاده کنید', '{domian}'),
+                                'desc' => esc_html__('از نام آیکن های فونت آسم استفاده کنید', '{domian}'),
                                 // 'set'   => 'font-awesome', // فقط Font Awesome را برای انتخاب کاربر نمایش می‌دهد
 
                             ),
 
                             'icon_Link' => array(
 
-                                'label' => __('لینک ایکن ها', '{domain}'),
+                                'label' => esc_html__('لینک ایکن ها', 'BizNews'),
                                 'type' => 'text',
-                                'help' => __('لینک شبکه های اجتماعی را در این بخش قرار دهید', '{domian}'),
+                                'help' => esc_html__('لینک شبکه های اجتماعی را در این بخش قرار دهید', '{domian}'),
 
                             ),
                         ),
 
                         'template' => 'آیکن  {{- icon_Name }}', // box title
                         'limit' => 0, // limit the number of boxes that can be added
-                        'add-button-text' => __('آیکن جدید', '{domain}'),
+                        'add-button-text' => esc_html__('آیکن جدید', 'BizNews'),
                         'sortable' => true,
                     ),
                 ),
@@ -108,26 +108,26 @@ $options = array(
     ),
 
     'Home_Settings' => array(
-        'title' =>  __('ویرایش صفحه اصلی', '{domain}'),
+        'title' =>  esc_html__('ویرایش صفحه اصلی', 'BizNews'),
 
         'options' => array(
             'first_section' => array(
-                'title' => __('بخش اول صفحه اصلی', '{domain}'),
+                'title' => esc_html__('بخش اول صفحه اصلی', 'BizNews'),
                 'options' => array(
 
                     'Main_slider' => array(
-                        'label' => __('تغییر محتوای اسلایدر اصلی', '{domain}'),
+                        'label' => esc_html__('تغییر محتوای اسلایدر اصلی', 'BizNews'),
                         'type' => 'multi-select',
-                        'desc' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
+                        'desc' => esc_html__('دسته بندی مورد نظر خود را انتخاب کنید', 'BizNews'),
                         'population' => 'taxonomy', // type of the content
                         'source' => 'category', //categorie
                         'limit' => 100,
                     ),
 
                     'Main_slider_GridCard' => array(
-                        'label' => __('محتوای شبکه ایی بخش اول سایت ', '{domain}'),
+                        'label' => esc_html__('محتوای شبکه ایی بخش اول سایت ', 'BizNews'),
                         'type' => 'multi-select',
-                        'desc' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
+                        'desc' => esc_html__('دسته بندی مورد نظر خود را انتخاب کنید', 'BizNews'),
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 100,
@@ -135,37 +135,37 @@ $options = array(
 
                     'Breaking_news' => array(
 
-                        'label' => __('اخبار فوری', '{domain}'),
+                        'label' => esc_html__('اخبار فوری', 'BizNews'),
                         'type' => 'multi-select',
-                        'desc' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
+                        'desc' => esc_html__('دسته بندی مورد نظر خود را انتخاب کنید', 'BizNews'),
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 100,
                     ),
 
                     'Breaking_news_title' => array(
-                        'label' => __('عنوان مورد نظر خود را وارد کنید', '{domain}'),
+                        'label' => esc_html__('عنوان مورد نظر خود را وارد کنید', 'BizNews'),
                         'type' => 'text',
-                        'desc' => __('می توانید عنوان بخش را تغییر دهید', '{domain}'),
+                        'desc' => esc_html__('می توانید عنوان بخش را تغییر دهید', 'BizNews'),
                     ),
 
                 ),
             ),
 
             'Featured_News_Section' => array(
-                'title' => __('بخش دوم صفحه اصلی', '{domain}'),
+                'title' => esc_html__('بخش دوم صفحه اصلی', 'BizNews'),
                 'options' => array(
 
                     'Featured_News_title' => array(
-                        'label' => __('عنوان بخش دوم را وارد کنید', '{domain}'),
+                        'label' => esc_html__('عنوان بخش دوم را وارد کنید', 'BizNews'),
                         'type' => 'text',
-                        'desc' => __('عنوان مربوط به بخش دوم', '{domain}'),
+                        'desc' => esc_html__('عنوان مربوط به بخش دوم', 'BizNews'),
                     ),
 
                     'Featured_News' => array(
-                        'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
+                        'label' => esc_html__('دسته بندی مورد نظر خود را انتخاب کنید', 'BizNews'),
                         'type' => 'multi-select',
-                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش دوم را وارد کنید', '{domain}'),
+                        'desc' => esc_html__('دسته بندی مورد نظر برای نمایش در بخش دوم را وارد کنید', 'BizNews'),
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 100,
@@ -176,59 +176,59 @@ $options = array(
             ),
 
             'Latest_News_Section' => array(
-                'title' => __(' بخش سوم صفحه اصلی', '{domain}'),
+                'title' => esc_html__(' بخش سوم صفحه اصلی', 'BizNews'),
                 'options' => array(
 
                     'Latest_News_title' => array(
-                        'label' => __('عنوان بخش سوم را وارد کنید', '{domain}'),
+                        'label' => esc_html__('عنوان بخش سوم را وارد کنید', 'BizNews'),
                         'type' => 'text',
-                        'desc' => __('عنوان مربوط به بخش سوم', '{domain}'),
+                        'desc' => esc_html__('عنوان مربوط به بخش سوم', 'BizNews'),
                     ),
 
                     'Latest_News' => array(
-                        'label' => __('دسته بندی خود را وارد کنید', '{domain}'),
+                        'label' => esc_html__('دسته بندی خود را وارد کنید', 'BizNews'),
                         'type' => 'multi-select',
-                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش سوم را وارد کنید', '{domain}'),
+                        'desc' => esc_html__('دسته بندی مورد نظر برای نمایش در بخش سوم را وارد کنید', 'BizNews'),
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 100,
                     ),
 
                     'Banner_main_ads_one' => array(
-                        'label' => __('بنر مورد نظر را آپلود کنید', '{domain}'),
+                        'label' => esc_html__('بنر مورد نظر را آپلود کنید', 'BizNews'),
                         'type' => 'upload',
                         // 'attr'  => array('class' => 'img-fluid'),
-                        'desc' => __('بنر تبلیغاتی اول در صفحه اصلی', '{domain}'),
-                        'help' => __('اندازه بنر می بایست 728 در 90 پیکسل باشد', '{domain}'),
+                        'desc' => esc_html__('بنر تبلیغاتی اول در صفحه اصلی', 'BizNews'),
+                        'help' => esc_html__('اندازه بنر می بایست 728 در 90 پیکسل باشد', 'BizNews'),
                         'images_only' => true,
                     ),
 
                     'Banner_ads_one_link' => array(
 
-                        'label' => __('لینک بنر ', '{domain}'),
+                        'label' => esc_html__('لینک بنر ', 'BizNews'),
                         'type' => 'text',
-                        'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
+                        'help' => esc_html__('لینک کامل بنر را وارد کنید', 'BizNews'),
 
                     ),
 
                     'Banner_ads_one_alt' => array(
 
-                        'label' => __('alt بنر تبلیغاتی', '{domain}'),
+                        'label' => esc_html__('alt بنر تبلیغاتی', 'BizNews'),
                         'type' => 'text',
-                        'desc' => __('قرار دادن alt', '{domain}'),
-                        'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
+                        'desc' => esc_html__('قرار دادن alt', 'BizNews'),
+                        'help' => esc_html__('متن جهت قرار دادن در alt تصاویر را وارد کنید', 'BizNews'),
 
                     ),
 
                     'Banner_ads_one_rel' => array(
 
-                        'label' => __('فالو یا نو فالو', '{domain}'),
-                        'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
+                        'label' => esc_html__('فالو یا نو فالو', 'BizNews'),
+                        'desc' => esc_html__('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', 'BizNews'),
                         'type'  => 'select',
                         'value' => ' ',
                         'choices' => array(
-                            'follow' => __('follow', '{domain}'),
-                            'nofollow' => __('nofollow', '{domain}')
+                            'follow' => esc_html__('follow', 'BizNews'),
+                            'nofollow' => esc_html__('nofollow', 'BizNews')
                         ),
                         /**
                          * Allow save not existing choices
@@ -241,19 +241,19 @@ $options = array(
             ),
 
             'Middle_section' => array(
-                'title' => __('بخش چهارم صفحه اصلی', '{domain}'),
+                'title' => esc_html__('بخش چهارم صفحه اصلی', 'BizNews'),
                 'options' => array(
 
                     'middle_content_title' => array(
 
-                        'label' => __('عنوان بخش چهارم را وارد کنید', '{domain}'),
-                        'desc' => __('عنوان مربوط به بخش چهارم', '{domain}'),
+                        'label' => esc_html__('عنوان بخش چهارم را وارد کنید', 'BizNews'),
+                        'desc' => esc_html__('عنوان مربوط به بخش چهارم', 'BizNews'),
                         'type' => 'text',
                     ),
 
                     'middle_content' => array(
-                        'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domian}'),
-                        'desc' => __('دسته بندی مورد نظر خود برای نمایش در چهارم را وارد کنید', '{domain}'),
+                        'label' => esc_html__('دسته بندی مورد نظر خود را انتخاب کنید', '{domian}'),
+                        'desc' => esc_html__('دسته بندی مورد نظر خود برای نمایش در چهارم را وارد کنید', 'BizNews'),
                         'type' => 'multi-select',
                         'population' => 'taxonomy',
                         'source' => 'category',
@@ -261,41 +261,41 @@ $options = array(
                     ),
 
                     'Banner_main_ads_two' => array(
-                        'label' => __('بنر مورد نظر را آپلود کنید', '{domain}'),
+                        'label' => esc_html__('بنر مورد نظر را آپلود کنید', 'BizNews'),
                         'type' => 'upload',
                         // 'attr'  => array('class' => 'img-fluid'),
-                        'desc' => __('بنر تبلیغاتی دوم در صفحه اصلی', '{domain}'),
-                        'help' => __('اندازه بنر می بایست 728 در 90 پیکسل باشد', '{domain}'),
+                        'desc' => esc_html__('بنر تبلیغاتی دوم در صفحه اصلی', 'BizNews'),
+                        'help' => esc_html__('اندازه بنر می بایست 728 در 90 پیکسل باشد', 'BizNews'),
                         'images_only' => true,
                     ),
 
 
                     'Banner_ads_two_link' => array(
 
-                        'label' => __('لینک بنر ', '{domain}'),
+                        'label' => esc_html__('لینک بنر ', 'BizNews'),
                         'type' => 'text',
-                        'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
+                        'help' => esc_html__('لینک کامل بنر را وارد کنید', 'BizNews'),
 
                     ),
 
                     'Banner_ads_two_alt' => array(
 
-                        'label' => __('alt بنر تبلیغاتی', '{domain}'),
+                        'label' => esc_html__('alt بنر تبلیغاتی', 'BizNews'),
                         'type' => 'text',
-                        'desc' => __('قرار دادن alt', '{domain}'),
-                        'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
+                        'desc' => esc_html__('قرار دادن alt', 'BizNews'),
+                        'help' => esc_html__('متن جهت قرار دادن در alt تصاویر را وارد کنید', 'BizNews'),
 
                     ),
 
                     'Banner_ads_two_rel' => array(
 
-                        'label' => __('فالو یا نو فالو', '{domain}'),
-                        'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
+                        'label' => esc_html__('فالو یا نو فالو', 'BizNews'),
+                        'desc' => esc_html__('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', 'BizNews'),
                         'type'  => 'select',
                         'value' => ' ',
                         'choices' => array(
-                            'follow' => __('follow', '{domain}'),
-                            'nofollow' => __('nofollow', '{domain}')
+                            'follow' => esc_html__('follow', 'BizNews'),
+                            'nofollow' => esc_html__('nofollow', 'BizNews')
                         ),
                         /**
                          * Allow save not existing choices
@@ -309,19 +309,19 @@ $options = array(
             ),
 
             'Last_section' => array(
-                'title' => __('بخش پنجم صفحه اصلی', '{domain}'),
+                'title' => esc_html__('بخش پنجم صفحه اصلی', 'BizNews'),
                 'options' => array(
 
                     'Last_content_title' => array(
 
-                        'label' => __('عنوان بخش پنجم را وارد کنید', '{domain}'),
-                        'desc' => __('عنوان مربوط به بخش پنجم', '{domain}'),
+                        'label' => esc_html__('عنوان بخش پنجم را وارد کنید', 'BizNews'),
+                        'desc' => esc_html__('عنوان مربوط به بخش پنجم', 'BizNews'),
                         'type' => 'text',
                     ),
 
                     'Last_content' => array(
-                        'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
-                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش پنجم را وارد کنید', '{domain}'),
+                        'label' => esc_html__('دسته بندی مورد نظر خود را انتخاب کنید', 'BizNews'),
+                        'desc' => esc_html__('دسته بندی مورد نظر برای نمایش در بخش پنجم را وارد کنید', 'BizNews'),
                         'type' => 'multi-select',
                         'population' => 'taxonomy',
                         'source' => 'category',
@@ -331,18 +331,18 @@ $options = array(
             ),
 
             'Sixth_section' => array(
-                'title' => __('بخش ششم صفحه اصلی', '{domain}'),
+                'title' => esc_html__('بخش ششم صفحه اصلی', 'BizNews'),
                 'options' => array(
 
                     'Sixth_section_title' => array(
-                        'label' => __('عنوان بخش ششم را وارد کنید', '{domain}'),
-                        'desc' => __('عنوان مربوط به بخش ششم', '{domain}'),
+                        'label' => esc_html__('عنوان بخش ششم را وارد کنید', 'BizNews'),
+                        'desc' => esc_html__('عنوان مربوط به بخش ششم', 'BizNews'),
                         'type' => 'text',
                     ),
 
                     'Sixth_section_cat' => array(
-                        'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
-                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش ششم را وارد کنید', '{domain}'),
+                        'label' => esc_html__('دسته بندی مورد نظر خود را انتخاب کنید', 'BizNews'),
+                        'desc' => esc_html__('دسته بندی مورد نظر برای نمایش در بخش ششم را وارد کنید', 'BizNews'),
                         'type' => 'multi-select',
                         'population' => 'taxonomy',
                         'source' => 'category',
@@ -352,19 +352,19 @@ $options = array(
                 ),
             ),
             'Seventh_section' => array(
-                'title' => __('بخش هفتم صفحه اصلی', '{domain}'),
+                'title' => esc_html__('بخش هفتم صفحه اصلی', 'BizNews'),
                 'options' => array(
 
                     'Seventh_section_title' => array(
-                        'label' => __('عنوان بخش هفتم را وارد کنید', '{domain}'),
-                        'desc' => __('عنوان مربوط به بخش هفتم', '{domain}'),
+                        'label' => esc_html__('عنوان بخش هفتم را وارد کنید', 'BizNews'),
+                        'desc' => esc_html__('عنوان مربوط به بخش هفتم', 'BizNews'),
                         'type' => 'text',
                     ),
 
                     'Seventh_section_cat' => array(
 
-                        'label' => __('دسته بندی مورد نظر خود را انتخاب کنید ', '{domain}'),
-                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش هفتم را وارد کنید', '{domain}'),
+                        'label' => esc_html__('دسته بندی مورد نظر خود را انتخاب کنید ', 'BizNews'),
+                        'desc' => esc_html__('دسته بندی مورد نظر برای نمایش در بخش هفتم را وارد کنید', 'BizNews'),
                         'type' => 'multi-select',
                         'population' => 'taxonomy',
                         'source' => 'category',
@@ -374,18 +374,18 @@ $options = array(
             ),
 
             'Eighth_section' => array(
-                'title' => __('بخش هشتم صفحه اصلی', '{domain}'),
+                'title' => esc_html__('بخش هشتم صفحه اصلی', 'BizNews'),
                 'options' => array(
 
                     'Eighth_section_title' => array(
-                        'label' => __('عنوان بخش هشتم را وارد کنید', '{domain}'),
-                        'desc' => __('عنوان مربوط به بخش هشتم', 'domain'),
+                        'label' => esc_html__('عنوان بخش هشتم را وارد کنید', 'BizNews'),
+                        'desc' => esc_html__('عنوان مربوط به بخش هشتم', 'domain'),
                         'type' => 'text',
                     ),
 
                     'Eighth_section_cat' => array(
-                        'label' => __('دسته بندی مورد نظر خود را انتخاب کنید', '{domain}'),
-                        'desc' => __('دسته بندی مورد نظر برای نمایش در بخش هشتم را وارد کنید ', '{domain}'),
+                        'label' => esc_html__('دسته بندی مورد نظر خود را انتخاب کنید', 'BizNews'),
+                        'desc' => esc_html__('دسته بندی مورد نظر برای نمایش در بخش هشتم را وارد کنید ', 'BizNews'),
                         'type' => 'multi-select',
                         'population' => 'taxonomy',
                         'source' => 'category',
@@ -402,39 +402,39 @@ $options = array(
     ),
 
     'Footer_Settings' => array(
-        'title' => __('تنظیمات محتوایی فوتر', '{domain}'),
+        'title' => esc_html__('تنظیمات محتوایی فوتر', 'BizNews'),
         'options' => array(
 
             'Foooter_column_one' => array(
-                'title' => __('ستون اول', '{domain}'),
+                'title' => esc_html__('ستون اول', 'BizNews'),
                 'options' => array(
 
                     'column_one_title' => array(
-                        'label' => __('عنوان ستون اول', '{domain}'),
-                        'desc' => __('تغییر نام ستون اول', '{domain}'),
+                        'label' => esc_html__('عنوان ستون اول', 'BizNews'),
+                        'desc' => esc_html__('تغییر نام ستون اول', 'BizNews'),
                         'type' => 'text',
                         'value' => '',
                     ),
 
                     'contact_list' => array(
 
-                        'label' => __('لیست راه های ارتباطی با ما', '{domain}'),
+                        'label' => esc_html__('لیست راه های ارتباطی با ما', 'BizNews'),
                         'type' => 'addable-box',
-                        'desc' => __('انتخاب آیکن و محتوای مناسب', '{domain}'),
+                        'desc' => esc_html__('انتخاب آیکن و محتوای مناسب', 'BizNews'),
                         'box-options' => array(
 
                             'contact_list_icon' => array(
-                                'label' => __('انتخاب آیکن', '{domain}'),
+                                'label' => esc_html__('انتخاب آیکن', 'BizNews'),
                                 'type' => 'icon-v2',
                                 'preview_size' => 'small',
                                 'model_size' => 'small',
-                                'desc' => __('آیکن مورد نظر خود را فونت آسم انتخاب کنید', '{domain}'),
+                                'desc' => esc_html__('آیکن مورد نظر خود را فونت آسم انتخاب کنید', 'BizNews'),
                                 // 'set'   => 'font-awesome', // فقط Font Awesome را برای انتخاب کاربر نمایش می‌دهد
                             ),
 
                             'contact_list_content' => array(
 
-                                'label' => __('محتوای مورد نظر خود را وارد کنید', '{domain}'),
+                                'label' => esc_html__('محتوای مورد نظر خود را وارد کنید', 'BizNews'),
                                 'type' => 'wp-editor',
                                 'size' => 'small', // small, large
                                 'editor_height' => 150,
@@ -445,49 +445,49 @@ $options = array(
 
                         ),
                         'template' => 'محتوای {{- contact_list_icon}}',
-                        'add-button-text' => __('محتوای جدید', '{domain}'),
+                        'add-button-text' => esc_html__('محتوای جدید', 'BizNews'),
                         'sortable' => true,
 
                     ),
 
                     'Social_title' => array(
 
-                        'label' => __('شبکه های اجتماعی', '{domain}'),
+                        'label' => esc_html__('شبکه های اجتماعی', 'BizNews'),
                         'type' => 'text',
-                        'desc' => __('عنوان بخش شبکه های اجتماعی', '{domain}'),
+                        'desc' => esc_html__('عنوان بخش شبکه های اجتماعی', 'BizNews'),
 
                     ),
 
                     'social_icon_footer' => array(
 
-                        'label' => __('آیکن شبکه های اجتماعی', '{domian}'),
+                        'label' => esc_html__('آیکن شبکه های اجتماعی', '{domian}'),
                         'type' => 'addable-box',
-                        'desc' => __('آیکن و لینک شبکه های اجتماعی را وارد کنید', '{domain}'),
+                        'desc' => esc_html__('آیکن و لینک شبکه های اجتماعی را وارد کنید', 'BizNews'),
                         'box-options' => array(
 
                             'social_icon' => array(
 
-                                'label' => __('انتخاب ایکن شبکه های اجتماعی', '{domain}'),
+                                'label' => esc_html__('انتخاب ایکن شبکه های اجتماعی', 'BizNews'),
                                 'type' => 'icon-v2',
                                 'preview_size' => 'small',
                                 // 'icon-class-without-root' => false,
 
                                 'model_size' => 'small',
-                                'desc' => __('از کتابخانه فونت اسم برای آیکن ها استفاده کنید', '{domain}'),
+                                'desc' => esc_html__('از کتابخانه فونت اسم برای آیکن ها استفاده کنید', 'BizNews'),
 
                             ),
 
                             'social_icon_link' => array(
 
-                                'label' => __('لینک شبکه های اجتماعی', '{domain}'),
+                                'label' => esc_html__('لینک شبکه های اجتماعی', 'BizNews'),
                                 'type' => 'text',
-                                'desc' => __('لینک شبکه های اجتماعی را در ایم بخش وارد کنید', '{domain}'),
+                                'desc' => esc_html__('لینک شبکه های اجتماعی را در ایم بخش وارد کنید', 'BizNews'),
 
                             ),
 
                         ),
                         'template' => 'محتوا {{- social_icon}}',
-                        'add-button-text' => __('آیکن محتوای جدید', '{domain}'),
+                        'add-button-text' => esc_html__('آیکن محتوای جدید', 'BizNews'),
                         'sortable' => true,
 
 
@@ -498,22 +498,22 @@ $options = array(
 
             'Footer_column_two' => array(
 
-                'title' => __('ستون دوم', '{domain}'),
+                'title' => esc_html__('ستون دوم', 'BizNews'),
                 'options' => array(
 
                     'Footer_column_two_title' => array(
 
-                        'label' => __('عنوان ستون دوم', '{domain}'),
+                        'label' => esc_html__('عنوان ستون دوم', 'BizNews'),
                         'type' => 'text',
-                        'desc' => __('تغییر نام ستون دوم', '{domain}'),
+                        'desc' => esc_html__('تغییر نام ستون دوم', 'BizNews'),
 
                     ),
 
                     'choose_category' => array(
 
-                        'label' => __('یک دسته بندی را انتخاب کنید', '{domain}'),
+                        'label' => esc_html__('یک دسته بندی را انتخاب کنید', 'BizNews'),
                         'type' => 'multi-select',
-                        'desc' => __('دسته بندی از مطالب جهت نمایش در فوتر را انتخاب کنید', '{domain}'),
+                        'desc' => esc_html__('دسته بندی از مطالب جهت نمایش در فوتر را انتخاب کنید', 'BizNews'),
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 3
@@ -525,14 +525,14 @@ $options = array(
 
             'Footer_column_three' => array(
 
-                'title' => __('ستون سوم', '{domain}'),
+                'title' => esc_html__('ستون سوم', 'BizNews'),
                 'options' => array(
 
                     'Footer_column_three_title' => array(
 
-                        'label' => __('عنوان ستون سوم', '{domain}'),
+                        'label' => esc_html__('عنوان ستون سوم', 'BizNews'),
                         'type' => 'text',
-                        'desc' => __('تغییر نام ستون سوم', '{domain}'),
+                        'desc' => esc_html__('تغییر نام ستون سوم', 'BizNews'),
                     ),
 
                 ),
@@ -541,21 +541,21 @@ $options = array(
 
             // 'Footer_column_four' => array(
 
-            //     'title' => __('ستون چهارم', '{domain}'),
+            //     'title' => esc_html__('ستون چهارم', 'BizNews'),
             //     'options' => array(
 
             //         'Footer_column_four_title' => array(
 
-            //             'label' => __('عنوان ستون چهارم', '{domain}'),
+            //             'label' => esc_html__('عنوان ستون چهارم', 'BizNews'),
             //             'type' => 'text',
-            //             'desc' => __('تغییر نام ستون چهارم', '{domain}'),
+            //             'desc' => esc_html__('تغییر نام ستون چهارم', 'BizNews'),
             //         ),
 
             //         'footer_gallery' => array(
-            //             'label' => __('تصاویر مورد نظر خود را انتخاب کنید', '{domain}'),
+            //             'label' => esc_html__('تصاویر مورد نظر خود را انتخاب کنید', 'BizNews'),
             //             'type' => 'multi-upload',
             //             'value' => array(),
-            //             'desc' => __('از بخش مدیا تصاویر مورد نظر گالری را انتخاب کنید', '{domain}'),
+            //             'desc' => esc_html__('از بخش مدیا تصاویر مورد نظر گالری را انتخاب کنید', 'BizNews'),
             //             'images_only' => true,
             //         ),
 
@@ -565,14 +565,14 @@ $options = array(
             // ),
 
             'Footer_copyright' => array(
-                'title' => __('کپی رایت', '{domain}'),
+                'title' => esc_html__('کپی رایت', 'BizNews'),
                 'options' => array(
 
                     'change_copyright' => array(
 
-                        'label' => __('محتوای انتهایی کپی رایت سایت را وارد کنید', '{domain}'),
+                        'label' => esc_html__('محتوای انتهایی کپی رایت سایت را وارد کنید', 'BizNews'),
                         'type' => 'wp-editor',
-                        'desc' => __('تغییر محتوای کپی رایت', 'domain'),
+                        'desc' => esc_html__('تغییر محتوای کپی رایت', 'domain'),
 
                     ),
 
@@ -582,20 +582,20 @@ $options = array(
     ),
 
     'sidebar_Settings' => array(
-        'title' => __('تنظیمات سایدبار', '{domain}'),
+        'title' => esc_html__('تنظیمات سایدبار', 'BizNews'),
         'options' => array(
 
             'add_title' => array(
-                'label' => __('عنوان مورد نظر خود را وارد کنید', '{domain}'),
+                'label' => esc_html__('عنوان مورد نظر خود را وارد کنید', 'BizNews'),
                 'type' => 'text',
-                'desc' => __('می توانید عنوان بخش را تغییر دهید', '{domain}')
+                'desc' => esc_html__('می توانید عنوان بخش را تغییر دهید', 'BizNews')
             ),
 
             'sidbar_banner_adds' => array(
 
-                'label' => __('آپلود بنر تبلیغاتی', '{domain}'),
-                'desc' => __('بنر تبلیغاتی سایدبار', '{domain}'),
-                'help' => __('اندزه بنر می بایست 410 در 250 پیکسل باشد'),
+                'label' => esc_html__('آپلود بنر تبلیغاتی', 'BizNews'),
+                'desc' => esc_html__('بنر تبلیغاتی سایدبار', 'BizNews'),
+                'help' => esc_html__('اندزه بنر می بایست 410 در 250 پیکسل باشد'),
                 'type' => 'upload',
                 'images_only' => true,
 
@@ -603,30 +603,30 @@ $options = array(
 
             'Banner_sidebar_link' => array(
 
-                'label' => __('لینک بنر ', '{domain}'),
+                'label' => esc_html__('لینک بنر ', 'BizNews'),
                 'type' => 'text',
-                'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
+                'help' => esc_html__('لینک کامل بنر را وارد کنید', 'BizNews'),
 
             ),
 
             'Banner_sidebar_alt' => array(
 
-                'label' => __('alt بنر تبلیغاتی', '{domain}'),
+                'label' => esc_html__('alt بنر تبلیغاتی', 'BizNews'),
                 'type' => 'text',
-                'desc' => __('قرار دادن alt', '{domain}'),
-                'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
+                'desc' => esc_html__('قرار دادن alt', 'BizNews'),
+                'help' => esc_html__('متن جهت قرار دادن در alt تصاویر را وارد کنید', 'BizNews'),
 
             ),
 
             'Banner_sidebar_rel' => array(
 
-                'label' => __('فالو یا نو فالو', '{domain}'),
-                'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
+                'label' => esc_html__('فالو یا نو فالو', 'BizNews'),
+                'desc' => esc_html__('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', 'BizNews'),
                 'type'  => 'select',
                 'value' => ' ',
                 'choices' => array(
-                    'follow' => __('follow', '{domain}'),
-                    'nofollow' => __('nofollow', '{domain}')
+                    'follow' => esc_html__('follow', 'BizNews'),
+                    'nofollow' => esc_html__('nofollow', 'BizNews')
                 ),
                 /**
                  * Allow save not existing choices
@@ -637,44 +637,44 @@ $options = array(
             ),
 
             'trending_sidbar' => array(
-                'label' => __(' عنوان بخش مطالب در سایدبار', '{domain}'),
+                'label' => esc_html__(' عنوان بخش مطالب در سایدبار', 'BizNews'),
                 'type' => 'text',
-                'desc' => __('تغییر عنوان بخش مطالب در ساید بار', '{domain}'),
+                'desc' => esc_html__('تغییر عنوان بخش مطالب در ساید بار', 'BizNews'),
             ),
 
             'trending_news_category' => array(
-                'label' => __('انتخاب دسته بندی مطالب', '{doamin}'),
+                'label' => esc_html__('انتخاب دسته بندی مطالب', '{doamin}'),
                 'type' => 'multi-select',
-                'desc' => __('دسته بندی مورد نظر جهت نمایش در بخش سایدبار را انتخاب کنید', '{domain}'),
+                'desc' => esc_html__('دسته بندی مورد نظر جهت نمایش در بخش سایدبار را انتخاب کنید', 'BizNews'),
                 'population' => 'taxonomy',
                 'source' => 'category',
                 'limit' => 100,
             ),
 
             'show_category' => array(
-                'label' => __('عنوان بخش نمایش همه عناوین دسته بندی', '{domain}'),
+                'label' => esc_html__('عنوان بخش نمایش همه عناوین دسته بندی', 'BizNews'),
                 'type' => 'text',
-                'desc' => __('تغییر عنوان بخش نمایش تمامی دسته بندی ها', '{domain}'),
+                'desc' => esc_html__('تغییر عنوان بخش نمایش تمامی دسته بندی ها', 'BizNews'),
             ),
 
         ),
     ),
 
     'sidebar_post_Settings' => array(
-        'title' => __(' تنظیمات سایدبار پست ها', '{domain}'),
+        'title' => esc_html__(' تنظیمات سایدبار پست ها', 'BizNews'),
         'options' => array(
 
             'sidbar_post_add_title' => array(
-                'label' => __('عنوان مورد نظر خود را وارد کنید', '{domain}'),
+                'label' => esc_html__('عنوان مورد نظر خود را وارد کنید', 'BizNews'),
                 'type' => 'text',
-                'desc' => __('می توانید عنوان بخش را تغییر دهید', '{domain}')
+                'desc' => esc_html__('می توانید عنوان بخش را تغییر دهید', 'BizNews')
             ),
 
             'sidbar_post_banner_adds' => array(
 
-                'label' => __('آپلود بنر تبلیغاتی', '{domain}'),
-                'desc' => __('بنر تبلیغاتی سایدبار', '{domain}'),
-                'help' => __('اندزه بنر می بایست 410 در 250 پیکسل باشد'),
+                'label' => esc_html__('آپلود بنر تبلیغاتی', 'BizNews'),
+                'desc' => esc_html__('بنر تبلیغاتی سایدبار', 'BizNews'),
+                'help' => esc_html__('اندزه بنر می بایست 410 در 250 پیکسل باشد'),
                 'type' => 'upload',
                 'images_only' => true,
 
@@ -682,30 +682,30 @@ $options = array(
 
             'Banner_sidbar_post_link' => array(
 
-                'label' => __('لینک بنر ', '{domain}'),
+                'label' => esc_html__('لینک بنر ', 'BizNews'),
                 'type' => 'text',
-                'help' => __('لینک کامل بنر را وارد کنید', '{domain}'),
+                'help' => esc_html__('لینک کامل بنر را وارد کنید', 'BizNews'),
 
             ),
 
             'Banner_sidbar_post_alt' => array(
 
-                'label' => __('alt بنر تبلیغاتی', '{domain}'),
+                'label' => esc_html__('alt بنر تبلیغاتی', 'BizNews'),
                 'type' => 'text',
-                'desc' => __('قرار دادن alt', '{domain}'),
-                'help' => __('متن جهت قرار دادن در alt تصاویر را وارد کنید', '{domain}'),
+                'desc' => esc_html__('قرار دادن alt', 'BizNews'),
+                'help' => esc_html__('متن جهت قرار دادن در alt تصاویر را وارد کنید', 'BizNews'),
 
             ),
 
             'Banner_sidbar_post_rel' => array(
 
-                'label' => __('فالو یا نو فالو', '{domain}'),
-                'desc' => __('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', '{domain}'),
+                'label' => esc_html__('فالو یا نو فالو', 'BizNews'),
+                'desc' => esc_html__('با انتخاب هر یک از گزینه های زیر فالو یا نو فالو بودن بنر را مشخص کنید', 'BizNews'),
                 'type'  => 'select',
                 'value' => ' ',
                 'choices' => array(
-                    'follow' => __('follow', '{domain}'),
-                    'nofollow' => __('nofollow', '{domain}')
+                    'follow' => esc_html__('follow', 'BizNews'),
+                    'nofollow' => esc_html__('nofollow', 'BizNews')
                 ),
                 /**
                  * Allow save not existing choices
@@ -716,24 +716,24 @@ $options = array(
             ),
 
             'trending_sidbar_post' => array(
-                'label' => __(' عنوان بخش مطالب در سایدبار', '{domain}'),
+                'label' => esc_html__(' عنوان بخش مطالب در سایدبار', 'BizNews'),
                 'type' => 'text',
-                'desc' => __('تغییر عنوان بخش مطالب در ساید بار', '{domain}'),
+                'desc' => esc_html__('تغییر عنوان بخش مطالب در ساید بار', 'BizNews'),
             ),
 
             // 'trending_news_category_sidbar_post' => array(
-            //     'label' => __('انتخاب دسته بندی مطالب', '{doamin}'),
+            //     'label' => esc_html__('انتخاب دسته بندی مطالب', '{doamin}'),
             //     'type' => 'multi-select',
-            //     'desc' => __('دسته بندی مورد نظر جهت نمایش در بخش سایدبار را انتخاب کنید', '{domain}'),
+            //     'desc' => esc_html__('دسته بندی مورد نظر جهت نمایش در بخش سایدبار را انتخاب کنید', 'BizNews'),
             //     'population' => 'taxonomy',
             //     'source' => 'category',
             //     'limit' => 100,
             // ),
 
             'sidbar_post_show_category' => array(
-                'label' => __('عنوان بخش نمایش همه عناوین دسته بندی', '{domain}'),
+                'label' => esc_html__('عنوان بخش نمایش همه عناوین دسته بندی', 'BizNews'),
                 'type' => 'text',
-                'desc' => __('تغییر عنوان بخش نمایش تمامی دسته بندی ها', '{domain}'),
+                'desc' => esc_html__('تغییر عنوان بخش نمایش تمامی دسته بندی ها', 'BizNews'),
             ),
 
         ),
