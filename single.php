@@ -198,7 +198,7 @@ get_header();
                                     </div>
                                 </div>
                                 <!-- share button -->
-                                 
+
                                 <!-- post change -->
                                 <div class="post-btn">
                                     <!-- Previous Post -->
