@@ -98,15 +98,15 @@
                     </figure>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
-                    <a rel="<?php echo $Banner_header_rel ?>" href="<?php echo $Banner_header_link; ?>" target="_blank" >
-                        <img width="100%" height="100%"  class="img-fluid" src="<?php
-                                                    if (!empty($Banner_header)) {
-                                                        echo $Banner_header["url"];
-                                                        // var_dump($Banner_header);
-                                                    } else {
-                                                        echo " ";
-                                                    }
-                                                    ?>
+                    <a rel="<?php echo $Banner_header_rel ?>" href="<?php echo $Banner_header_link; ?>" target="_blank">
+                        <img width="100%" height="100%" class="img-fluid" src="<?php
+                                                                                if (!empty($Banner_header)) {
+                                                                                    echo $Banner_header["url"];
+                                                                                    // var_dump($Banner_header);
+                                                                                } else {
+                                                                                    echo " ";
+                                                                                }
+                                                                                ?>
                 " alt="<?php echo $Banner_header_alt; ?>">
                     </a>
                 </div>
@@ -116,7 +116,7 @@
 
         <!-- Navbar Start -->
 
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 ">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 menu-navbar ">
 
             <figure class="d-lg-none">
                 <?php

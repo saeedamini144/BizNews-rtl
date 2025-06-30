@@ -1,3 +1,4 @@
+// jQuery code for the BizNews RTL theme
 (function ($) {
     "use strict";
 
@@ -193,3 +194,25 @@
 })(jQuery);
 
 
+// Function to make the header sticky on scroll
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".menu-navbar"); // Selects the first element with class "navbar"
+    if (navbar) { // Ensure the navbar element exists
+        const stickyOffset = navbar.offsetTop; // Get the initial offset of the navbar
+
+        function stickyHeader() {
+            if (window.pageYOffset > stickyOffset) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+        window.onscroll = function () {
+            stickyHeader();
+        };
+
+        // Call it once on load to check initial position
+        stickyHeader();
+    }
+});

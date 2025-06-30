@@ -3966,6 +3966,35 @@ input[type="button"].btn-block {
   opacity: 0;
 }
 
+/* header sticky start */
+.menu-navbar {
+  /* Existing styles for your navbar */
+  transition: all 0.3s ease-in-out;
+  /* Add this line for smooth transitions */
+  /* You might want to add a background-color here if it's not already defined for the non-sticky state */
+  background-color: #343a40;
+  /* Example: Ensure it has a background to avoid transparency issues */
+  width: 100%;
+  /* Ensure a consistent width */
+  z-index: 999;
+  /* A bit lower than sticky z-index, but higher than default content */
+}
+
+.menu-navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  /* Higher z-index to ensure it's on top */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  /* Slightly stronger shadow for visibility */
+  /* You can also change background-color here if you want a different one for sticky state */
+  background-color: #343a40;
+  /* Keep consistent or change as desired */
+  transition: all 0.3s ease-in-out;
+}
+
+/* header sticky end */
 .custom-control-input:checked~.custom-control-label::before {
   color: #fff;
   border-color: #FFCC00;
@@ -4001,6 +4030,7 @@ input[type="button"].btn-block {
   margin-bottom: 0;
   vertical-align: top;
 }
+
 
 .custom-control-label::before {
   position: absolute;
