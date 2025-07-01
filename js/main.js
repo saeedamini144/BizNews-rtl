@@ -195,10 +195,34 @@
 
 
 // Function to make the header sticky on scroll
+// document.addEventListener("DOMContentLoaded", function () {
+//     const navbar = document.querySelector(".menu-navbar"); // Selects the first element with class "navbar"
+//     if (navbar) { // Ensure the navbar element exists
+//         const stickyOffset = navbar.offsetTop; // Get the initial offset of the navbar
+
+//         function stickyHeader() {
+//             if (window.pageYOffset > stickyOffset) {
+//                 navbar.classList.add("sticky");
+//             } else {
+//                 navbar.classList.remove("sticky");
+//             }
+//         }
+
+//         window.onscroll = function () {
+//             stickyHeader();
+//         };
+
+//         // Call it once on load to check initial position
+//         stickyHeader();
+//     }
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
-    const navbar = document.querySelector(".menu-navbar"); // Selects the first element with class "navbar"
-    if (navbar) { // Ensure the navbar element exists
-        const stickyOffset = navbar.offsetTop; // Get the initial offset of the navbar
+    const navbar = document.querySelector(".menu-navbar"); // عنصر با کلاس "menu-navbar" را انتخاب می‌کند
+
+    // فقط اگر navbar وجود داشت و دارای کلاس "sticky-header-enabled" بود، کد را اجرا کن
+    if (navbar && navbar.classList.contains("sticky-header-enabled")) {
+        const stickyOffset = navbar.offsetTop; // آفست اولیه navbar را می‌گیرد
 
         function stickyHeader() {
             if (window.pageYOffset > stickyOffset) {
@@ -212,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function () {
             stickyHeader();
         };
 
-        // Call it once on load to check initial position
+        // یک بار در زمان بارگذاری صفحه برای بررسی موقعیت اولیه فراخوانی می‌شود
         stickyHeader();
     }
 });

@@ -7,6 +7,28 @@ $options = array(
         'title' => esc_html__('تنظیمات هدر', 'BizNews'),
         'options' => array(
 
+            'Sticky_Header' => array(
+                'title' => esc_html__('هدر چسبنده', 'BizNews'),
+                'options' => array(
+                    'Sticky_Header_Options' => array(
+                        'type'  => 'switch',
+                        'value' => 'No',
+                        // 'attr'  => array( 'class' => 'custom-class', 'data-foo' => 'bar' ),
+                        'label' => esc_html__('هدر چسبنده', 'BizNews'),
+                        'desc'  => esc_html__('به وسیله این سویچ می توانید هدر سایت را چسبنده کنید', 'BizNews'),
+                        'help'  => esc_html__('توجه: هدر فقط در بخش نمایش لیست منو چسبنده می شود.', 'BizNews'),
+                        'left-choice' => array(
+                            'value' => 'Yes',
+                            'label' => esc_html__('خاموش', 'BizNews'),
+                        ),
+                        'right-choice' => array(
+                            'value' => 'No',
+                            'label' => esc_html__('روشن', 'BizNews'),
+                        ),
+                    ),
+                ),
+            ),
+
             'Banner_Header' => array(
                 'title' => esc_html__('بنر تبلیغاتی هدر', 'BizNews'),
                 'options' => array(

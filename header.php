@@ -7,6 +7,13 @@
     <?php
     wp_head(); //call The header
 
+    $Sticky_Header_Options = fw_get_db_customizer_option('Sticky_Header_Options', 'No');
+    $navbar_classes = array('menu-navbar'); // کلاس‌های پیش‌فرض نوبار شما
+
+    if ($Sticky_Header_Options === 'Yes') {
+        $navbar_classes[] = 'sticky-header-enabled'; // کلاسی که جاوا اسکریپت شما به آن نیاز دارد
+    }
+
     $Banner_header = fw_get_db_customizer_option('Banner_header');
     $Social_icon = fw_get_db_customizer_option('Social_icon');
     $Mobile_logo = fw_get_db_customizer_option('Mobile_logo');
@@ -116,7 +123,7 @@
 
         <!-- Navbar Start -->
 
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 menu-navbar ">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 menu-navbar <?php echo esc_attr(implode(' ', $navbar_classes)); ?> ">
 
             <figure class="d-lg-none">
                 <?php
