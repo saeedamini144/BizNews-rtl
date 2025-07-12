@@ -133,6 +133,19 @@ $options = array(
         'title' =>  esc_html__('ویرایش صفحه اصلی', 'BizNews'),
 
         'options' => array(
+
+            'Header_Title' => array(
+                'title' => esc_html__('H1 صفحه اصلی', 'BizNews'),
+                'options' => array(
+                    'Header_H1_Text' => array(
+                        'label' => esc_html__('عنوان H1 صفحه اصلی', 'BizNews'),
+                        'type' => 'text',
+                        'desc' => esc_html__('تغییر عنوان H1 صفحه اصلی', 'BizNews'),
+                        'help' => esc_html__('توجه: این عنوان نمایش H1 در صفحه اصلی می باشد', 'BizNews'),
+                    ),
+                ),
+            ),
+
             'first_section' => array(
                 'title' => esc_html__('بخش اول صفحه اصلی', 'BizNews'),
                 'options' => array(
@@ -373,6 +386,7 @@ $options = array(
 
                 ),
             ),
+
             'Seventh_section' => array(
                 'title' => esc_html__('بخش هفتم صفحه اصلی', 'BizNews'),
                 'options' => array(
@@ -418,7 +432,6 @@ $options = array(
 
 
             ),
-
 
         ),
     ),

@@ -1,6 +1,7 @@
 <?php
 get_header();
 
+$Header_H1_Text = fw_get_db_customizer_option('Header_H1_Text');
 $Breaking_news_title = fw_get_db_customizer_option('Breaking_news_title');
 $Featured_News_title = fw_get_db_customizer_option('Featured_News_title');
 $Latest_News_title = fw_get_db_customizer_option('Latest_News_title');
@@ -21,7 +22,7 @@ $Eighth_section_title = fw_get_db_customizer_option('Eighth_section_title');
 ?>
 <!-- Main News Slider Start -->
 <main class="container-fluid">
-    <!-- <h1 class="invisible position-absolute m-0 text-uppercase font-weight-bold"><?php echo $Eighth_section_title ?></h1> -->
+    <h1 class="invisible position-absolute m-0 text-uppercase font-weight-bold"><?php echo $Header_H1_Text; ?></h1>
     <div class="row">
         <div class="col-lg-7 px-0">
             <div class="owl-carousel main-carousel position-relative">
